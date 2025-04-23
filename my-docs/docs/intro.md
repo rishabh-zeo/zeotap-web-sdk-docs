@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+title: Introduction to Zeotap SDK
+---
+
+# Welcome to the Zeotap SDK Documentation
+
+ The Zeotap Web SDK enables you to collect and manage user data, track events, and set page properties on your website. This documentation will guide you through the implementation process and provide examples for common use cases.
+
+## Prerequisties
+1. Access to Zeotap CDP.
+2. Write key obtained from a source created in Zeotap CDP.
+
+## Getting Started
+
+Ready to unlock the full potential of your customer data? Follow these steps to get started:
+
+1. **Installation:** Learn how to quickly integrate the Zeotap SDK into your application. [Quick Start Guide](./quickStart.md)
+2. **Configuration:** Configure the SDK. [Configuration Guide](./configuration.md)
+3. **Consent Resolution:** Configure consent resolution mechanism. [Consent Resolution Guide](./consent-resolution.md)
+4. **Methods:** See all the available methods. [Methods Guide](./methods.md)
+5. **Examples:** Guide to different use cases and their implementation. [Examples Guide](./examples.md)
+6. **Best Practices:** Some best practices to leverage the full potential of Zeotap SDK. [Best Practices Guide](./best-practices.md) 
+
+## Support
+
+If you have any questions or need assistance, please refer to the [FAQ](./faq.md) section or contact our support team.
+
