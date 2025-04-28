@@ -15,15 +15,19 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // url: 'https://your-docusaurus-site.example.com',
+  // // Set the /<baseUrl>/ pathname under which your site is served
+  // // For GitHub pages deployment, it is often '/<projectName>/'
+  // baseUrl: '/',
+
+  url: 'https://rishabh-zeo.github.io/', // Your GitHub username or org name here
+  baseUrl: '/zeotap-web-sdk-docs/', // *** The name of your GitHub repository ***
+
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'rishabh-zeo', // Usually your GitHub org/user name.
+  projectName: 'zeotap-web-sdk-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
