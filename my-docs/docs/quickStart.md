@@ -69,4 +69,4 @@ To track user events, you can use the `setEventProperties` method:
 
 ## Example
 
-Check out the basic setup example. [Quick Start Example](./quickStartEx.html)
+Check out <a href="/examples/quickStartEx.html" target="_blank">this example</a>. 
