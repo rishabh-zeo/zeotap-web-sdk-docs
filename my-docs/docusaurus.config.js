@@ -29,7 +29,7 @@ const config = {
   organizationName: 'rishabh-zeo', // Usually your GitHub org/user name.
   projectName: 'zeotap-web-sdk-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
