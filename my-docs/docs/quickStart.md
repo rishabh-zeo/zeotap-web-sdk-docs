@@ -23,7 +23,7 @@ To install the Zeotap Web SDK, add the following script to your file:
 
 This integrates the zeotap sdk to your website.
 
-## Setting up of User Identities <a href="./methods.md" style={{"fontSize": "15px"}}>(Learn more)</a>
+## Setting up of User Identities <a href="./APIReference/setUserIdentites.md" style={{"fontSize": "15px"}}>(Learn more)</a>
 
 Once the Zeotap SDK is integrated, you can start setting up user identities. User identities are how you associate data to specific users.
 
