@@ -6,7 +6,7 @@ title: Quick Start Guide
 
 ## Integration
 
-To install the Zeotap Web SDK, add the following script to your file:
+To install the Zeotap Web SDK, add the following script to your `<head>` of your file:
 
 ```js
     <script type="text/javascript">!function(e,t){var 
@@ -22,6 +22,10 @@ To install the Zeotap Web SDK, add the following script to your file:
 ```
 
 This integrates the zeotap sdk to your website.
+
+:::info
+You need to input your [```write key```](/docs/Configurations/#mandatory-option) in place of ```YOUR_WRITE_KEY``` so that the data gets ingested to a ***WEB JS source*** created in your zeotap cdp account.
+:::
 
 ## Setting up of User Identities <span style={{"fontSize": "15px"}}>[(Learn more)](./APIReference/setUserIdentities)</span>
 
@@ -68,5 +72,4 @@ To track user events, you can use the `setEventProperties` method:
 ```
 
 ## Example
-
-Check out <a href="/examples/quickStartEx.html" target="_blank">this example</a>. 
+Check out <a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/tree/master/my-docs/static/examples" target="_blank">this example.</a> 

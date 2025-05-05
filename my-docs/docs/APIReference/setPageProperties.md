@@ -4,26 +4,72 @@ title: Tracking Page Views
 description: Send page view events to Zeotap.
 ---
 
-**Description:**
-This function allows you to track information about the web pages users are viewing in your application. This provides valuable context for their website interactions.
+**Description:**  
+Track information about the web pages users view in your application. This helps provide valuable context for analyzing user interactions.
+
+:::tip[Note]
+By default, the SDK includes the page `URL`, `path`, and `referrer URL` in the payload.
+:::
 
 **Parameters:**
-* `pageName`: `string` - A string representing the name or category of the viewed page (e.g., 'Product Detail', 'Homepage').
-* `properties`: `object` (Optional) - An object containing additional key-value pairs describing the page.
-    * `url`: `string` (Optional) - The URL of the viewed page.
-    * `title`: `string` (Optional) - The title of the page.
-    * `category`: `string` (Optional) - The category of the page.
-    * ... (Add other relevant parameters)
 
-**Example:**
+- `properties`: `object` *(optional)* – Key-value pairs describing the page being viewed:
+  - `pageName`: `string` *(optional)* – Name of the page.
+  - `url`: `string` *(optional)* – Full URL of the page.
+  - `title`: `string` *(optional)* – Title of the page.
+  - `category`: `string` *(optional)* – Page category.
+  - *(Add other relevant parameters as needed.)*
+
+**Usage Example:**
+
 ```javascript
-window.zeotap.setPageProperties( {
-  'productId': 'XYZ-101',
-  'productCategory': 'Electronics',
-  'title': 'My Awesome Website'
+window.zeotap.setPageProperties({
+  pageName: "Product Page",
+  url: "https://test.zeotap.com/product1",
+  path: "/products"
 });
 ```
 
-:::tip[Note]
-If the page view is not recorded this way, then while other events are recorded (refer to the [Set Event Properties](./setEventProperties.md) section), the SDK attaches the page URL, path and referrer URL by default to the payload.
-:::
+**Verification:**
+
+The page properties will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call:
+
+```json title="Page properties in payload" {5,14-18}
+            "events": [
+                {
+                "event": {
+                    "id": "m9Tva77fUH4ILi3SPBBVn",
+                    "eventName": "pageView", //pageView event triggered
+                    "eventTimestamp": 1745959356443
+                },
+                "user": {
+                    "zs": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                    "zi": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                    "zi_domain": ".zeotap.com",
+                    "email": "jane.doe@email.com"
+                },
+                "page": { //Page Properties being sent
+                    "pageName": "Product Page",
+                    "path": "/products",
+                    "referrer": "https://test.zeotap.com/",
+                    "url": "https://test.zeotap.com/product1"
+                },
+                "version": "4.4.3"
+                }
+            ]
+```
+
+To verify that page view tracking is working:
+
+1. Open your browser's **Developer Tools** (`F12` or right-click → *Inspect*).
+2. Go to the **Network** tab.
+3. Trigger a page view in your application.
+4. Look for a network request sent to ```https://spl.zeotap.com/fp?```.
+5. Check for the request with ```eventName: pageView```.
+5. Check the request payload — it should contain a `page` node with the following fields:
+   - `url`
+   - `path`
+   - `referrer`
+   - Any custom values you passed (e.g., `pageName`, `title`, `category`).
+
+This confirms that the SDK is successfully capturing and transmitting the page view data.

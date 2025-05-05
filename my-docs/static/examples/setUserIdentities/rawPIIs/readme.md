@@ -6,7 +6,7 @@ This HTML file demonstrates **Scenario 1: Sending Raw Identifiers** using the Ze
 
 ## Key Concepts Demonstrated
 
-*   **SDK Initialization for Raw PII:** Configuring the SDK using `window.zeotap.init` with the specific flags required for Scenario 1:
+*   **SDK Initialization for Raw PII:** Configuring the SDK using `window.zeotap.init` with the specific options required for Scenario 1:
     *   `hashIdentities: false` (Tells the SDK *not* to perform client-side hashing).
     *   `areIdentitiesHashed: false` (Confirms that the values being provided are *not* already hashed).
 *   **Calling `setUserIdentities` with Raw Data:** Using standard PII keys (`email`, `cellno`, `loginid`, `fpuid`) and providing the actual, readable user data as string values.

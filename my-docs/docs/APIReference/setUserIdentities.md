@@ -33,7 +33,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 <!-- Raw Identifiers Section START --------------------->
 <div style={{"display": "flex", "alignItems": "baseline", "gap": "15px"}}>
 ### Sending Raw Identifiers
-<a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/blob/master/my-docs/static/examples/setUserIdentities_rawEx.html" target="_blank">View Example</a>
+<a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/tree/master/my-docs/static/examples/setUserIdentities/rawPIIs" target="_blank">View Example</a>
 </div>
 <details style={{marginLeft: "1rem"}}>
 <summary><strong>Scenario 1: Sending Raw Identifiers (Implementation Steps)</strong></summary>
@@ -244,7 +244,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 <!-- Pre hashed Identifiers Section START --------------------->
 <div style={{"display": "flex", "alignItems": "baseline", "gap": "15px"}}>
 ### Sending Pre-Hashed Identifiers
-<a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/blob/master/my-docs/static/examples/setUserIdentities_rawEx.html" target="_blank">View Example</a>
+<a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/tree/master/my-docs/static/examples/setUserIdentities/preHashedPIIs" target="_blank">View Example</a>
 </div>
 <details style={{marginLeft: "1rem"}}>
 <summary><strong>Scenario 2: Sending Pre-Hashed Identifiers (Implementation Steps)</strong></summary>
@@ -419,7 +419,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 <!-- SDK Performs Hashing Identifiers Section START --------------------->
 <div style={{"display": "flex", "alignItems": "baseline", "gap": "15px"}}>
 ### SDK Performs Hashing
-<a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/blob/master/my-docs/static/examples/setUserIdentities_rawEx.html" target="_blank">View Example</a>
+<a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/tree/master/my-docs/static/examples/setUserIdentities/PIIshasingBySDK" target="_blank">View Example</a>
 </div>
 <details style={{marginLeft: "1rem"}}>
 <summary><strong>Scenario 3: SDK Performs Hashing (Client-Side Implementation)</strong></summary>

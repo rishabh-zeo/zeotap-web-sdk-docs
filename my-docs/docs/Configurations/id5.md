@@ -13,9 +13,9 @@ The Zeotap Web SDK offers an optional integration with [ID5](https://id5.io/), a
 *   You must have an active account with ID5.
 *   You need your unique **Partner ID** provided by ID5.
 
-## Configuration Flags
+## Configuration options
 
-The ID5 integration is controlled by the following flags within the SDK's `init` options:
+The ID5 integration is controlled by the following options within the SDK's `init` options:
 
 ### `enableID5`
 
@@ -30,7 +30,7 @@ The ID5 integration is controlled by the following flags within the SDK's `init`
 *   **Type:** `Number`
 *   **Default:** `null` / `undefined`
 *   **Description:** Your unique numerical Partner ID assigned to you by ID5.
-    *   This flag is **required** if `enableID5` is set to `true`. The SDK cannot interact with the ID5 service without a valid Partner ID.
+    *   This option is **required** if `enableID5` is set to `true`. The SDK cannot interact with the ID5 service without a valid Partner ID.
     *   Obtain this ID directly from your ID5 account manager or dashboard.
 
 ### `sendPartnerDataToID5`

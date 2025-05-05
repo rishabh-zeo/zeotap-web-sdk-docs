@@ -1,14 +1,14 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 title: Hashing Configuration
-description: Understand how to configure PII hashing behavior using hashIdentities and areIdentitiesHashed flags.
+description: Understand how to configure PII hashing behavior using hashIdentities and areIdentitiesHashed options.
 ---
 
 ## `hashIdentities` & `areIdentitiesHashed`
 
-These two configuration flags work together to control how the Zeotap SDK handles Personal Identifiable Information (PII) like email addresses and phone numbers when you call the `setUserIdentities` function. Correctly configuring these flags is crucial for ensuring data is processed according to your intended hashing strategy.
+These two configuration options work together to control how the Zeotap SDK handles Personal Identifiable Information (PII) like email addresses and phone numbers when you call the `setUserIdentities` function. Correctly configuring these options is crucial for ensuring data is processed according to your intended hashing strategy.
 
-## Flag Definitions
+## Options Definitions
 
 *   **`hashIdentities`**
     *   **Type:** `Boolean`
@@ -32,7 +32,7 @@ See all the cases and usage in [Choosing Your Hashing Strategy](../APIReference/
 
 ## Invalid Configuration
 
-Setting both flags to `true` is ambiguous and should be avoided:
+Setting both options to `true` is ambiguous and should be avoided:
 
 *   `hashIdentities: true` (Tells SDK to hash input)
 *   `areIdentitiesHashed: true` (Tells SDK input is already hashed)

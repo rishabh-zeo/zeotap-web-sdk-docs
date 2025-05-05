@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 title: persistenceInCookieStorage
 description: Control storage mechanism (cookie vs. local storage).
 ---
@@ -12,7 +12,7 @@ description: Control storage mechanism (cookie vs. local storage).
 
 **Description:**
 
-This configuration flag determines the browser storage mechanism used by the Zeotap SDK to persist user identities and consent information between page loads and sessions.
+This configuration option determines the browser storage mechanism used by the Zeotap SDK to persist user identities and consent information between page loads and sessions.
 
 *   **`false` (Default):** The SDK utilizes `localStorage`. This is generally suitable for most cases, offering potentially larger storage capacity and not being automatically sent with network requests.
 *   **`true`:** The SDK utilizes `cookieStorage`.
@@ -39,7 +39,7 @@ window.zeotap.init("YOUR_WRITE_KEY", {
 ```
 
 :::note ZI Stamping
-ZI is always stamped in cookie storage irrespective of this flag's value. In case, cookie storage is not available, then ZI is stamped in local storage.
+ZI is always stamped in cookie storage irrespective of this option's value. In case, cookie storage is not available, then ZI is stamped in local storage.
 :::
 
-Try out this <a href="/examples/persistenceInCookieStorage_Ex.html" target="_blank">example</a>. 
+Try out this <a href="https://github.com/rishabh-zeo/zeotap-web-sdk-docs/tree/master/my-docs/static/examples/configurations/persistenceInCookieStorage" target="_blank">example</a>. 
