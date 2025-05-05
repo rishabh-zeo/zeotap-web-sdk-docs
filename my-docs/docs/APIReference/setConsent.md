@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Set Consent
+title: Tracking User Consent
 description: Send consent and/or brand consent flags.
 ---
 
@@ -21,16 +21,19 @@ The following are the primary consent keys that are accepted in user consent:
 | track | Boolean | If the value of the key is true, then you can track any user data |
 | cookieSync | Boolean | If the value of the key is true, then you can cookieSync |
 
+Check out more about how primary consent is resolved [here](/docs/category/consent-resolution)
+
 ## Brand Consent
 
-You can pass any brand consent with/without the primary consent keys. Anything other than the primary consent keys will be considered as brand consent.
+You can pass any brand consent with/without the primary consent keys. Anything other than the primary consent keys will be considered as brand consent. 
 
+The brand consent is persisted and passed as `z_p` key in the payload of subsequent events.
+
+These are few ways of using the setConsent method:
 ```javascript
 setConsent({track: true, cookieSync: true}) //provides primary consent values only
 setConsent({track: true, brand1Consent: true}) //provides primary consent as well as brand consent
 setConsent({ brand1Consent: true, brand2Consent: false}) //provides brand consent only
 ```
-
-Check out <a href="/examples/quickStartEx.html" target="_blank">this example HTML</a>. 
 
 

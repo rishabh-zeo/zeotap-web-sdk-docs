@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Set User Identities
+title: Tracking User Identities
 description: Send identifiers to persistently identify user activity across the website.
 ---
 
@@ -86,7 +86,7 @@ Custom identities are the identities that the client chooses to input and can be
     // 2. Set raw identities
     window.zeotap.setUserIdentities({
     email: 'user@example.com',       // Raw email
-    phone: '+1 5551234567',         // Raw phone number
+    cellno: '1 5551234567',         // Raw phone number
     userId: 'customer-abc-123'     // Your internal ID (usually not hashed)
     });
     ```
@@ -141,7 +141,7 @@ Custom identities are the identities that the client chooses to input and can be
     // 2. Set the identities
     window.zeotap.setUserIdentities({
     email: 'user@example.com',       // Provide RAW email
-    phone: '+1 5551234567',         // Provide RAW phone number
+    cellno: '1 5551234567',         // Provide RAW phone number
     userId: 'customer-abc-123'     // Internal IDs are typically not hashed
     });
     ```

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Where is data stamped
+sidebar_position: 1
+title: persistenceInCookieStorage
 description: Control storage mechanism (cookie vs. local storage).
 ---
 

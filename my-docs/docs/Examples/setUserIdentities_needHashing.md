@@ -56,7 +56,7 @@ description: Examples showing different ways to handle identifier hashing with s
         document.getElementById('identifyButton').addEventListener('click', function() {
             // Define the raw identifiers
             const rawEmail = 'user@example.com';
-            const rawCellno = '+1 5551234567';
+            const rawCellno = '1 5551234567';
 
             // Define the identities object using standard keys with RAW values
             const identitiesToHash = {

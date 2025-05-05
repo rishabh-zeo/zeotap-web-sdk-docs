@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Set Page Properties
+title: Tracking Page Views
 description: Send page view events to Zeotap.
 ---
 

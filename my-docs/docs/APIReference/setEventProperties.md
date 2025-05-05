@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Set Event Properties
+title: Tracking User Actions
 description: Track user activities.
 ---
 

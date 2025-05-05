@@ -23,7 +23,7 @@ To install the Zeotap Web SDK, add the following script to your file:
 
 This integrates the zeotap sdk to your website.
 
-## Setting up of User Identities <a href="./APIReference/setUserIdentites.md" style={{"fontSize": "15px"}}>(Learn more)</a>
+## Setting up of User Identities <span style={{"fontSize": "15px"}}>[(Learn more)](./APIReference/setUserIdentities)</span>
 
 Once the Zeotap SDK is integrated, you can start setting up user identities. User identities are how you associate data to specific users.
 
@@ -32,12 +32,12 @@ The Zeotap SDK provides the `setUserIdentities` function to identify your users 
  ```js
         window.zeotap.setUserIdentities({
             email: 'user@example.com',
-            cellno: '+15551234567',
+            cellno: '1 5551234567',
             userId: '12345',
         })
 ```
 
-## Sending page propeties to Zeotap <a href="./methods.md" style={{"fontSize": "15px"}}>(Learn more)</a>
+## Sending page propeties to Zeotap <span style={{"fontSize": "15px"}}>[(Learn more)](./APIReference/setPageProperties)</span>
 
 Page properties allow you to send information about the current page to Zeotap. This can be useful for tracking user behavior, understanding page engagement, and segmenting your audience.
 
@@ -52,7 +52,7 @@ To send page properties, use the `setPageProperties` method:
 ```
 
 
-## Tracking user events <a href="./methods.md" style={{"fontSize": "15px"}}>(Learn more)</a>
+## Tracking user events <span style={{"fontSize": "15px"}}>[(Learn more)](./APIReference/setEventProperties)</span>
 
 setEventProperties allows you to track specific actions that users take on your website, such as adding an item to a cart, completing a purchase, or signing up for a newsletter.
 

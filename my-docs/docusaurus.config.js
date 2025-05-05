@@ -53,7 +53,7 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -66,6 +66,8 @@ const config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL'
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -92,6 +94,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          {to: 'blog', label: 'Release Notes', position: 'left'},
          
           {
             href: 'https://github.com/facebook/docusaurus',
