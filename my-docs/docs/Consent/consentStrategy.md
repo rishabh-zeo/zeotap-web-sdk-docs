@@ -49,7 +49,6 @@ The primary goal is to ensure that the Zeotap SDK only collects and processes us
     *   When the user makes a choice (e.g., clicks "Accept All", "Reject All", or customizes settings), retrieve the consent status.
     *   Translate this status into the format expected by `setConsent` (e.g., `{ "track": "true" }`).
     *   Call `window.zeotap.setConsent()` with the appropriate object.
-    *   **Crucially**: Ensure the SDK is initialized *after* you have determined the initial consent state or configure it to wait for the `setConsent` call before sending data (often the default behavior when `setConsent` is used).
 *   **Pros:** Flexible, allows integration with any system.
 *   **Cons:** Requires more development effort to build and maintain the consent logic and UI. You are responsible for correctly interpreting and translating consent signals.
 

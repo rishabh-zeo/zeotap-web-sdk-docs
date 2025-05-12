@@ -53,21 +53,12 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          showReadingTime: false,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL'
+          path: './blog',
+          routeBasePath: 'release-notes', 
+          blogTitle: 'Release Notes',
+          blogDescription: 'All product updates and changes',
+          blogSidebarTitle: 'All Versions',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -94,8 +85,11 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: 'releaseNotes', label: 'Release Notes', position: 'left'},
-         
+          {
+            to: '/release-notes', 
+            label: 'Release Notes', 
+            position: 'left'
+          },
           {
             href: 'https://github.com/zeotap',
             label: 'GitHub',
