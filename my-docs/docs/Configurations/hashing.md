@@ -1,12 +1,16 @@
 ---
-sidebar_position: 1
-title: Hashing Configuration
+sidebar_position: 2
+title: PII Hashing Configuration
 description: Understand how to configure PII hashing behavior using hashIdentities and areIdentitiesHashed options.
 ---
 
 ## `hashIdentities` & `areIdentitiesHashed`
 
 These two configuration options work together to control how the Zeotap SDK handles Personal Identifiable Information (PII) like email addresses and phone numbers when you call the `setUserIdentities` function. Correctly configuring these options is crucial for ensuring data is processed according to your intended hashing strategy.
+
+:::note [PIIs]
+These configuration only affect PIIs sent using setUserIdentities function. Recognised PIIs are cellno, email, loginid. [Learn more about PIIs](../APIReference/setUserIdentities#pii-identifier-key-reference)
+:::
 
 ## Options Definitions
 
@@ -21,7 +25,7 @@ These two configuration options work together to control how the Zeotap SDK hand
     *   **Description:** Tells the SDK whether the PII values you are **providing** in the `setUserIdentities` call are *already* hashed. If `true`, you must use the specific hashed keys (e.g., `email_sha256_lowercase`).
 
 
-## Default Behavior (No Explicit Configuration)
+## Default Behavior
 
 If you do **not** explicitly set `hashIdentities` or `areIdentitiesHashed` during `init`:
 
@@ -30,16 +34,7 @@ If you do **not** explicitly set `hashIdentities` or `areIdentitiesHashed` durin
 
 See all the cases and usage in [Choosing Your Hashing Strategy](../APIReference/setUserIdentities#choosing-your-hashing-strategy).
 
-## Invalid Configuration
-
-Setting both options to `true` is ambiguous and should be avoided:
-
-*   `hashIdentities: true` (Tells SDK to hash input)
-*   `areIdentitiesHashed: true` (Tells SDK input is already hashed)
-
-This configuration creates a conflict – should the SDK hash data that is supposedly already hashed? The SDK's behavior in this state might be unpredictable or lead to double-hashed (incorrect) data. **Do not use this combination.**
-
-## Summary Table
+## Combined usage
 
 | `hashIdentities` | `areIdentitiesHashed` | Resulting Scenario                     |
 | :--------------- | :-------------------- | :------------------------------------- |
@@ -48,10 +43,18 @@ This configuration creates a conflict – should the SDK hash data that is suppo
 | `true`           | `false`               | [**3: SDK Performs Hashing**](../APIReference/setUserIdentities#sdk-performs-hashing) (Default)  |
 | `true`           | `true`                | **Invalid**                            |
 
-
 :::tip Recommendation
-While the defaults lead to Scenario 3, it is **highly recommended** to explicitly set both `hashIdentities` and `areIdentitiesHashed` in your `init` configuration to clearly document your intended hashing strategy and avoid potential confusion.
+While the defaults lead to [**Scenario 3: SDK Performs Hashing**](../APIReference/setUserIdentities#sdk-performs-hashing), it is **highly recommended** to explicitly set both `hashIdentities` and `areIdentitiesHashed` in your `init` configuration to clearly document your intended hashing strategy and avoid potential confusion.
 :::
+
+:::warning[Invalid Configuration]
+Setting both `hashIdentities: true` and `areIdentitiesHashed: true` simultaneously is an invalid configuration.
+
+This creates a conflict: the SDK is being told to hash data that is also being declared as already hashed. This can lead to incorrect, double-hashed data.
+
+**Do not use this combination.** 
+:::
+
 
 ## Related Topics
 

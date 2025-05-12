@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: ID5 Integration
 description: Configure the Zeotap SDK to integrate with the ID5 Universal ID solution.
 ---

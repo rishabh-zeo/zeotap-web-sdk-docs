@@ -3,6 +3,11 @@ sidebar_position: 2
 title: Quick Start Guide
 ---
 
+## Setup in Zeotap CDP
+
+Create a Web Javascript source in your Zeotap CDP account. [How to create a Web JS source?](https://docs.zeotap.com/articles/#!integrate-customer/creating-web-js-source-2676490558)
+
+Obtain the write key from the created source. [How to obtain a write key?](./Configurations/writeKey)
 
 ## Integration
 
@@ -24,7 +29,7 @@ To install the Zeotap Web SDK, add the following script to your `<head>` of your
 This integrates the zeotap sdk to your website.
 
 :::info
-You need to input your [```write key```](/docs/Configurations/#mandatory-option) in place of ```YOUR_WRITE_KEY``` so that the data gets ingested to a ***WEB JS source*** created in your zeotap cdp account.
+You need to input your [```write key```](./Configurations/writeKey) in place of ```YOUR_WRITE_KEY``` so that the data gets ingested to a ***WEB JS source*** created in your zeotap cdp account.
 :::
 
 ## Setting up of User Identities <span style={{"fontSize": "15px"}}>[(Learn more)](./APIReference/setUserIdentities)</span>

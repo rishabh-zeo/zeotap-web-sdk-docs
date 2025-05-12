@@ -67,7 +67,7 @@ To verify that the user action tracking is working:
 1. Open your browser's **Developer Tools** (`F12` or right-click → *Inspect*).
 2. Go to the **Network** tab.
 3. Perform the action you’re tracking (e.g., add an item to a cart or view a product).
-4. Look for a network request sent to ```https://spl.zeotap.com/fp?```.
+4. Look for a network `POST` request sent to ```https://spl.zeotap.com/fp?```.
 5. Check the request payload — it should contain:
    - An `event` node with the `eventName` (e.g., `"AddToCart"`)
    - A `properties` object with the custom values you passed (e.g., `productId`, `quantity`, `price`)

@@ -4,6 +4,8 @@ title: Choosing a Consent Strategy
 description: Understand the different ways to manage user consent with the Zeotap Web SDK and choose the best approach for your needs.
 ---
 
+TODO: recheck content for this!!
+
 # Choosing Your Consent Management Strategy
 
 Integrating a Consent Management Platform (CMP) or handling user consent is crucial for compliance with privacy regulations like GDPR. The Zeotap Web SDK offers flexibility in how you manage and communicate user consent choices. This guide helps you choose the best approach for your implementation.
@@ -51,6 +53,7 @@ The primary goal is to ensure that the Zeotap SDK only collects and processes us
 *   **Pros:** Flexible, allows integration with any system.
 *   **Cons:** Requires more development effort to build and maintain the consent logic and UI. You are responsible for correctly interpreting and translating consent signals.
 
+TODO: is it needed? 
 ## Decision Flow
 
 1.  **Are you subject to GDPR or similar privacy regulations?**
@@ -63,7 +66,7 @@ The primary goal is to ensure that the Zeotap SDK only collects and processes us
 
 3.  **Do you need fine-grained control over the consent mechanism, or are you using a non-TCF CMP?**
     *   **Yes:** Use the `setConsent` API (Option 3). You will need to build the logic to capture user consent and pass it to the SDK.
-    *   **No (and you don't want to use a TCF CMP):** Re-evaluate if you truly don't need a CMP. If you only need simple "all or nothing" consent, the `setConsent` API with `{ "consent": true/false }` might suffice, but ensure this meets legal requirements in your operating regions.
+    *   **No (and you don't want to use a TCF CMP):** Re-evaluate if you truly don't need a CMP. If you only need simple "all or nothing" consent, the `setConsent` API with `{ "track": true/false }` might suffice, but ensure this meets legal requirements in your operating regions.
 
 ## Key Considerations
 

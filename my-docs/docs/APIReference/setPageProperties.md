@@ -64,7 +64,7 @@ To verify that page view tracking is working:
 1. Open your browser's **Developer Tools** (`F12` or right-click → *Inspect*).
 2. Go to the **Network** tab.
 3. Trigger a page view in your application.
-4. Look for a network request sent to ```https://spl.zeotap.com/fp?```.
+4. Look for a network `POST` request sent to ```https://spl.zeotap.com/fp?```.
 5. Check for the request with ```eventName: pageView```.
 5. Check the request payload — it should contain a `page` node with the following fields:
    - `url`

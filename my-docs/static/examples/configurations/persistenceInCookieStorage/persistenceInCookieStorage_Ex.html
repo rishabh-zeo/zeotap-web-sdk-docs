@@ -26,7 +26,7 @@
 
       // Configure SDK to use Cookie Storage for cross-subdomain persistence
       const sdkOptions = {
-        persistenceInCookieStorage: true, // Use cookie storage instead of localStorage
+        persistenceInCookieStorage: true, // Use cookie storage instead of sessionStorage
       };
 
       window.zeotap.init(writeKey, sdkOptions);

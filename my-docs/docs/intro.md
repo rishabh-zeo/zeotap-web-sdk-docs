@@ -9,7 +9,7 @@ title: Introduction to Zeotap SDK
 
 ## Prerequisties
 1. Access to Zeotap CDP.
-2. Write key obtained from a source created in Zeotap CDP.
+2. Write key obtained from a source created in Zeotap CDP. [How to obtain a write key?](./Configurations/writeKey)
 
 ## Getting Started
 

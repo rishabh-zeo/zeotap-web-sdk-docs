@@ -1,45 +1,51 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 title: Configurations
 ---
 
 ## Usage
 
-The Zeotap Web SDK can be configured by passing an options object during the [`init`](/docs/quickStart#integration) call. eg: `window.zeotap.init("YOUR_WRITE_KEY", <options>);`
+The Zeotap Web SDK can be configured by passing an options object during the [`init`](/docs/quickStart#integration) call. eg: `window.zeotap.init("writeKey", <options>);`
 
-## SDK Configuration Options
-
-### Mandatory Option
-| Option                          | Type                                     | Description                                                                                                                                                              |
+## Mandatory
+| Key                          | Type                                     | Description                                                                                                                                                              |
 | :--------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `writeKey`                         | String                                   | **Required.** Your unique Zeotap Write Key to authorize data sending to your specific source.                                                                    |
+| <a href="./writeKey">`writeKey`</a>                         | String                                   | **Required.** Your unique Zeotap Write Key to send data to your specific source. It can be obtained from access details of your web javascript source created in Zeotap CDP.        |
+
+## SDK Configuration Options                                                
 
 ### PII related Options
+
+Only works for PIIs (cellno, email, loginid) sent using [setUserIdentities](../APIReference/setUserIdentities)
 
 | Option                          | Type                                     | Description                                                                                                                                                              |
 | :--------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <a href="./hashing">`areIdentitiesHashed`</a>           | Boolean                                  | Set to `true` if the identities you pass to `setUserIdentities` are already hashed (e.g., SHA-256). Defaults to `false`.                                         |
 | <a href="./hashing">`hashIdentities`</a>                 | Boolean                                  | Set to `true` to enable automatic client-side SHA-256 hashing of email/phone identities before sending. Defaults to `true`.                                    |
 
-### Consent Options
+[Learn more about PII hashing options ](./hashing#combined-usage)
+
+### Consent Options 
 
 | Option                          | Type                                     | Description                                                                                                                                                              |
 | :--------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `optOut`                           | Boolean                                  | If set to `true`, no events are posted to the backend. This option is a fallback when consent is not used. Defaults to `false`.                                 |
-| `useConsent`                       | Boolean                                  | If set to `true`, the SDK waits to receive a consent signal and uses that consent to manage actions. Defaults to `false`.                                        |
-| `checkForCMP`                      | Boolean                                  | If set to `false`, the Non-TCF Zeotap CMP is used for consent management. Defaults to `true`.                                                                   |
-| `purposesForTracking`              | Number[]                                 | TCF Purpose IDs required for tracking user activity. Default depends on TCF version/config (e.g., `[1,3,4]` or `[1,5,6]`).                                      |
-| `purposesForCookieSync`            | Number[]                                 | TCF Purpose IDs required for cookie syncing. Default depends on TCF version/config (e.g., `[1,3,4]` or `[1,5,6]`).                                             |
-| `includeTCFString`                 | Boolean                                  | If `true`, the TCF consent string is included in the event payload regardless of the consent mechanism used. No default specified.                              |
-| `shouldCheckZeotapVendorConsent`   | Boolean                                  | If `true`, the SDK checks for Zeotap's vendor consent (ID 301) before checking tracking purposes. Defaults to `false`.                                           |
+| [`useConsent`](./consentOptions#useconsent)                       | Boolean                                  | If set to `true`, the SDK waits to receive a consent signal and uses that consent to manage actions. Defaults to `false`.                                        |
+| [`checkForCMP`](./consentOptions#checkforcmp)                       | Boolean                                  | If set to `false`, the Non-TCF Zeotap CMP is used for consent management. Defaults to `true`.                                                                   |
+| [`purposesForTracking`](./consentOptions#purposesfortracking)             | Number[]                                 | TCF Purpose IDs required for tracking user activity. Default depends on TCF version/config (e.g., `[1,3,4]` or `[1,5,6]`).                                      |
+| [`purposesForCookieSync`](./consentOptions#purposesforcookiesyncing)            | Number[]                                 | TCF Purpose IDs required for cookie syncing. Default depends on TCF version/config (e.g., `[1,3,4]` or `[1,5,6]`).                                             |
+| [`includeTCFString`](./consentOptions#includetcfstring)                     | Boolean                                  | If `true`, the TCF consent string is included in the event payload regardless of the consent mechanism used. No default specified.                              |
+| [`shouldCheckZeotapVendorConsent`](./consentOptions#shouldcheckzeotapvendorconsent)     | Boolean                                  | If `true`, the SDK checks for Zeotap's vendor consent (ID 301) before checking tracking purposes. Defaults to `false`.                                           |
 
-### Stroage options
+[Learn more about combined usage of consent options](./consentOptions#combined-usage)
+
+
+### Storage options
 
 | Option                          | Type                                     | Description                                                                                                                                                              |
 | :--------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `storageExpirationDays`            | Number                                   | Defines how long (in days) any cookies used for storage are set for. Not applicable to localStorage. Defaults to `365`.                                            |
 | `domain`                           | String                                   | If specified, cookies are stored against this domain (e.g., '.yourdomain.com'). By default, cookies are saved against the top-level domain. Defaults to `undefined`. |
-| <a href="./persistenceInCookieStorage">`persistenceInCookieStorage`</a>       | Boolean                                  | If `true`, identities and consent info are persisted in cookie storage; otherwise, localStorage is used. Defaults to `false`.                                    |
+| <a href="./persistenceInCookieStorage">`persistenceInCookieStorage`</a>       | Boolean                                  | If `true`, identities and consent info are persisted in cookie storage; otherwise, sessionStorage is used. Defaults to `false`.                                    |
 
 
 ### ID5 integration Options
@@ -68,7 +74,7 @@ The Zeotap Web SDK can be configured by passing an options object during the [`i
 
 
 
-### Misc options
+### Other options
 | Option                          | Type                                     | Description                                                                                                                                                              |
 | :--------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <a href="./allowCookieSync">`allowCookieSync`</a>                     | Boolean                                  | If set to `true`, cookie syncing takes place. Defaults to `true`.                                                                                              |

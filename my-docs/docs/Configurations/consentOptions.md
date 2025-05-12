@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Consent Configuration Options
 description: Detailed explanation of the SDK configuration options related to user consent management.
 ---
@@ -12,25 +12,18 @@ Refer to the [Choosing Your Consent Management Strategy guide](../Consent/consen
 
 ---
 
-### `optOut`
-
-*   **Type:** `Boolean`
-*   **Default:** `false`
-*   **Description:** Provides a simple, global opt-out mechanism.
-    *   **`false` (Default):** The SDK operates normally (subject to other consent settings).
-    *   **`true`:** Disables all tracking and cookie syncing for the current user/session, regardless of other consent settings. This acts as a hard stop.
-
----
 
 ### `useConsent`
 
 *   **Type:** `Boolean`
 *   **Default:** `false`
 *   **Description:** This is the primary flag to enable or disable the SDK's consent management features.
-    *   **`false` (Default):** The SDK operates in its default mode. Tracking and cookie syncing behavior are primarily controlled by the `optOut` flag. The SDK generally assumes consent unless explicitly opted out.
+    *   **`false` (Default):** The SDK operates in its default mode. Tracking and cookie syncing behavior are primarily controlled by the `optOut` flag. The SDK  assumes consent unless explicitly opted out.
     *   **`true`:** Activates consent management. The SDK will now expect and respect consent signals before performing actions like tracking or cookie syncing. It will either look for a TCF CMP (if `checkForCMP` is `true`) or wait for [`setConsent`](../APIReference/setConsent) calls (if `checkForCMP` is `false`). Events may be queued until consent is determined.
 
 ---
+
+
 
 ### `checkForCMP`
 
@@ -90,5 +83,27 @@ Refer [TCF/GDPR consent strategy](../Consent/gdpr) for usage and more details.
     *   **`true`:** In addition to checking purpose consents, the SDK will also explicitly check if consent has been granted for Zeotap as a vendor (Vendor ID 301) within the TCF consent string. Tracking and/or cookie syncing will only proceed if both the required purpose consents *and* vendor consent for Zeotap are present.
 
 ---
+
+
+## Combined usage 
+
+| `useConsent` | `checkForCMP` | `setConsent()` call | Description of SDK Behavior                                                                                                                                                                                                                                                                                                                                      |
+| :----------: | :-----------: | :---------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  *Not Passed*   | *Not Passed* | Only called for passing brand consents. | [**Default Behavior:**](../Consent/default) Consent management is disabled. The SDK assumes consent is granted and performs tracking and cookie syncing.                                                                                                                                                                                       |
+| `true`     | `true`     | Only called for passing brand consents. | [**TCF Integration:**](../Consent/gdpr) Consent management is enabled, and the SDK expects to interact with a TCF v2.x compliant CMP. The SDK reads consent signals (TC String) from the CMP to determine tracking and cookie syncing permissions. The `track` and `cookieSync` parameters within `setConsent` (if called) are ignored, but Brand Consents are processed. |
+| `true`     | `false`    | Required for passing consent signals and/or brand consents. | [**Custom Consent Management:**](../Consent/customConsent) Consent management is enabled, and the SDK relies on manual `setConsent()` calls to receive consent signals. The `track` and `cookieSync` parameters directly control tracking and cookie syncing behavior, respectively. Additional properties (brand consents) are also processed and sent.                                                                                                                                   |
+
+
+
+## Consent Configuration Combinations and SDK Behavior
+
+*   **`useConsent`:** If `useConsent` is `false`, the SDK essentially ignores any subsequent consent signals and leads to [default consent mode](../Consent/default). It's the main configuration to enable/disable consent management.
+*   **`checkForCMP` for [TCF](../Consent/gdpr) vs. [Custom](../Consent/customConsent):** When `useConsent: true`, this flag dictates whether the SDK *automatically* listens for a TCF CMP (`checkForCMP: true`) or relies on *manual* calls to `setConsent()` (`checkForCMP: false`).
+*   **`setConsent()` Behavior:** The `setConsent()` function's behavior is highly dependent on the `useConsent` and `checkForCMP` settings:
+    *   **[TCF](../Consent/gdpr) (`checkForCMP: true`):** The `track` and `cookieSync` parameters in `setConsent` are ignored; the TC String from the CMP is the source of truth. However, non-standard properties (brand consents) are still processed.
+    *   **[Custom](../Consent/customConsent) (`checkForCMP: false`):** The `track` and `cookieSync` parameters *directly* control SDK tracking and cookie syncing actions.
+
+
+
 
 By configuring these options correctly, you can ensure the Zeotap Web SDK aligns with your specific consent requirements and respects user privacy choices.

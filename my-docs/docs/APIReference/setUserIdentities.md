@@ -23,7 +23,7 @@ Identifiers set using `setUserIdentities()` are persisted (based on your <a href
 You can send different categories of identifiers:
 
 1.  **Personal Identifiable Information (PII):** Standardized identifiers like email or phone number. These can be sent raw or pre-hashed.
-2.  **Custom Identities:** Your own first-party identifiers (e.g., `crmId`, `loyaltyId`). Hashing configurations generally don't apply to these.
+2.  **Custom Identities:** Your own first-party identifiers (e.g., `crmId`, `loyaltyId`). Hashing configurations don't apply to these.
 
 ## Choosing Your Hashing Strategy
 
@@ -626,7 +626,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
 
 
-**PII Identifier Key Reference**
+### PII Identifier Key Reference
 
 | PII Property     | Key to Use if Sending RAW <br/> *(Scenarios 1 & 3)* | Key to Use if Sending PRE-HASHED <br/> *(Scenario 2 Only)*                                                                                                                                                                                             | Description & Important Notes                                                                                                                                                                                                                                                           |
 | :--------------- | :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

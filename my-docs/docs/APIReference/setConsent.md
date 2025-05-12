@@ -1,12 +1,16 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: Tracking User Consent
 description: Send consent and/or brand consents.
 ---
 
 ## Description
 
-Once the SDK is initialized for [custom consent](../Consent/customConsent), you can use the `setConsent` function to provide the user's consent status.
+Once the SDK is initialized for, you can use the `setConsent` function to provide the user's consent status.
+
+For [custom consent](../Consent/customConsent) it is needed to specifiy the consent status.
+
+It can also be used to specify any brand consents.
 
 ```javascript
 window.zeotap.setConsent(consentObject);
@@ -33,6 +37,10 @@ The `consentObject` is a JavaScript object containing key-value pairs. It includ
 - Used for tracking consent related to marketing (e.g., `newsletterOptIn`, `personalizationConsent`).
 - Passed as query parameters in spl call under `z_p`.
 - Do **not** directly control SDK tracking or cookie behavior.
+
+:::note
+ Brand consents are processed and sent to Zeotap independently of the track and cookieSync settings. Even if primary tracking consent is denied, brand consent information can still be transmitted.
+:::
 
 ---
 
@@ -71,6 +79,10 @@ window.zeotap.setConsent({
 });
 ```
 
+:::note
+setConsent call triggers a GET call to ```https://spl.zeotap.com/fp?``` with   ```event_eventName: "setConsent"/"updateConsent"```.
+:::
+
 ---
 
 ## SDK Behavior Based on `setConsent`
@@ -95,7 +107,7 @@ window.zeotap.setConsent({
 ## Persistence
 
 - By default, consent is hashed and stored in **Session Storage**.
-- If `persistenceInCookieStorage: true` is set during init, consent is stored in a **first-party cookie** — useful for cross-subdomain persistence.
+- If `persistenceInCookieStorage: true` is set during init, consent is stored in a **first-party cookie** — useful for cross-subdomain persistence. [Learn more about ```persistenceInCookieStorage```](../Configurations/persistenceInCookieStorage)
 
 ---
 
