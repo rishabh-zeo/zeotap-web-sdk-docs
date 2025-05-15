@@ -32,7 +32,7 @@ The primary reason to set `persistenceInCookieStorage: true` is for **cross-subd
 
 **Example:**
 
-```javascript title="SDK Initialization for Cross-Subdomain Cookie Storage"
+```jsx title="SDK Initialization for Cross-Subdomain Cookie Storage"
 window.zeotap.init("YOUR_WRITE_KEY", {
   persistenceInCookieStorage: true, // Use cookie storage
 });

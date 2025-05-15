@@ -22,7 +22,7 @@ By default, the SDK includes the page `URL`, `path`, and `referrer URL` in the p
 
 **Usage Example:**
 
-```javascript
+```jsx
 window.zeotap.setPageProperties({
   pageName: "Product Page",
   url: "https://test.zeotap.com/product1",
@@ -34,7 +34,7 @@ window.zeotap.setPageProperties({
 
 The page properties will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call:
 
-```json title="Page properties in payload" {5,14-18}
+```jsxon title="Page properties in payload" {5,14-18}
             "events": [
                 {
                 "event": {

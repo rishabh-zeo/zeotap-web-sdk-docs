@@ -44,7 +44,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 1.  **Configure the SDK Initialization:**
     To use this scenario, you **must** explicitly tell the SDK *not* to perform hashing itself and confirm that the data you will provide is *not* already hashed. This is done during the `init` call:
 
-    ```javascript title="SDK Initialization for Raw Identifiers"
+    ```jsx title="SDK Initialization for Raw Identifiers"
     window.zeotap.init("YOUR_WRITE_KEY", {
       // --- Configuration for Scenario 1 ---
       hashIdentities: false,      // Crucial: Tells the SDK *NOT* to hash the values itself.
@@ -67,7 +67,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         </ul>
 
         **Implementation Example:**
-        ```javascript title="Sending Raw Email"
+        ```jsx title="Sending Raw Email"
         window.zeotap.setUserIdentities({
         email: 'jane.doe@email.com' // Provide the actual email address
         });
@@ -75,7 +75,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The email will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call:
 
-        ```json title="Identities in payload" {12-12}
+        ```jsxon title="Identities in payload" {12-12}
             "events": [
                 {
                 "event": {
@@ -128,7 +128,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         </ul>
 
         **Implementation Example:**
-        ```javascript title="Sending Raw Cell Phone (Recommended Format)"
+        ```jsx title="Sending Raw Cell Phone (Recommended Format)"
         window.zeotap.setUserIdentities({
           cellno: '1 5551234567' // Provide the actual phone number
         });
@@ -138,7 +138,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The `cellno` will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call, within the `user` object:
 
-        ```json title="Identities in payload" {12-12}
+        ```jsxon title="Identities in payload" {12-12}
             "events": [
                 {
                 "event": {
@@ -192,7 +192,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         </ul>
 
         **Implementation Example:**
-        ```javascript title="Sending Raw Login ID"
+        ```jsx title="Sending Raw Login ID"
         window.zeotap.setUserIdentities({
           loginid: 'janedoe99' // Provide the actual login ID
         });
@@ -200,7 +200,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The `loginid` will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call, within the `user` object:
 
-        ```json title="Identities in payload" {12-12}
+        ```jsxon title="Identities in payload" {12-12}
             "events": [
                 {
                  { /* ... */ },
@@ -257,7 +257,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 1.  **Configure the SDK Initialization:**
     Tell the SDK *not* to hash again and that the values you provide *are* already hashed.
 
-    ```javascript title="SDK Initialization for Pre-Hashed Identifiers"
+    ```jsx title="SDK Initialization for Pre-Hashed Identifiers"
     window.zeotap.init("YOUR_WRITE_KEY", {
       // --- Configuration for Scenario 2 ---
       hashIdentities: false,      // Optional but good practice: Tell SDK NOT to hash again.
@@ -281,7 +281,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         <p><em>Supported hash types: SHA-256, MD5, SHA-1 (lowercase/uppercase variants).</em></p>
 
         **Implementation Example:**
-        ```javascript title="Sending Pre-Hashed Email (SHA-256 Lowercase)"
+        ```jsx title="Sending Pre-Hashed Email (SHA-256 Lowercase)"
         // Assume 'hashedEmailValue' contains the SHA-256 hash of the lowercase email
         const hashedEmailValue = 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2';
 
@@ -292,7 +292,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The specific hashed email key and value will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call:
 
-        ```json title="Identities in payload" {8-8}
+        ```jsxon title="Identities in payload" {8-8}
             "events": [
                 {
                  { /* ... */ },
@@ -334,7 +334,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         <p><em>It's crucial to use the key that reflects your hashing source (with/without country code, E.164) and algorithm (SHA-256, MD5, SHA-1). See <a href="../FAQs/howToSendCellno">Cellno Handling Details</a>.</em></p>
 
         **Implementation Example:**
-        ```javascript title="Sending Pre-Hashed Cell Phone (SHA-256 with Country Code)"
+        ```jsx title="Sending Pre-Hashed Cell Phone (SHA-256 with Country Code)"
         // Assume 'hashedPhoneValue' contains the SHA-256 hash of the phone including country code (e.g., '15551234567')
         const hashedPhoneValue = 'f6e5d4c3b2a1a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4';
 
@@ -345,7 +345,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The specific hashed cell phone key and value will be passed in the payload:
 
-        ```json title="Identities in payload" {8-8}
+        ```jsxon title="Identities in payload" {8-8}
             "events": [
                 {
                  { /* ... */ },
@@ -379,7 +379,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         <p><em>Supported hash types: SHA-256, MD5, SHA-1 (lowercase/uppercase variants).</em></p>
 
         **Implementation Example:**
-        ```javascript title="Sending Pre-Hashed Login ID (SHA-256 Lowercase)"
+        ```jsx title="Sending Pre-Hashed Login ID (SHA-256 Lowercase)"
         // Assume 'hashedLoginIdValue' contains the SHA-256 hash of the lowercase login ID
         const hashedLoginIdValue = 'g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2a3b4c5d6e7f8';
 
@@ -390,7 +390,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The specific hashed login ID key and value will be passed in the payload:
 
-        ```json title="Identities in payload" {7-7}
+        ```jsxon title="Identities in payload" {7-7}
             "events": [
                 { /* ... */ },
                 "user": {
@@ -432,7 +432,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 1.  **Configure the SDK Initialization:**
     Enable the SDK's built-in hashing and confirm that the values you will provide are raw.
 
-    ```javascript title="SDK Initialization for SDK Hashing"
+    ```jsx title="SDK Initialization for SDK Hashing"
     window.zeotap.init("YOUR_WRITE_KEY", {
       // --- Configuration for Scenario 3 ---
       hashIdentities: true,       // Crucial: Tells the SDK TO perform hashing.
@@ -454,7 +454,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         </ul>
 
         **Implementation Example:**
-        ```javascript title="Sending Raw Email (SDK will hash)"
+        ```jsx title="Sending Raw Email (SDK will hash)"
         window.zeotap.setUserIdentities({
           email: 'user@example.com' // Provide RAW email
         });
@@ -462,7 +462,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The SDK will hash the email (SHA-256 lowercase by default) and send the hashed value in the payload of the ```https://spl.zeotap.com/fp?``` call:
 
-        ```json title="Identities in payload (SDK Hashed)" {8-15}
+        ```jsxon title="Identities in payload (SDK Hashed)" {8-15}
             "events": [
                 {
                  { /* ... */ },
@@ -513,7 +513,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         <p><em>Using other formats (like `1555...` or just `555...`) will lead to incorrect or incomplete hashes being generated by the SDK. See <a href="../FAQs/howToSendCellno">Cellno Handling Details</a>.</em></p>
 
         **Implementation Example:**
-        ```javascript title="Sending Raw Cell Phone (SDK will hash - Format is CRITICAL)"
+        ```jsx title="Sending Raw Cell Phone (SDK will hash - Format is CRITICAL)"
         window.zeotap.setUserIdentities({
           cellno: '1 5551234567' // Provide RAW phone in '[code] [number]' format
         });
@@ -521,7 +521,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The SDK will generate multiple hashes (SHA-256, MD5, SHA-1) for each representation (without country code, with country code, E.164) based on the correctly formatted input and send them in the payload:
 
-        ```json title="Identities in payload (SDK Hashed - Cellno Complete Example)" {8-22}
+        ```jsxon title="Identities in payload (SDK Hashed - Cellno Complete Example)" {8-22}
             "events": [
                 {
                  { /* ... */ },
@@ -575,7 +575,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
         </ul>
 
         **Implementation Example:**
-        ```javascript title="Sending Raw Login ID (SDK will hash)"
+        ```jsx title="Sending Raw Login ID (SDK will hash)"
         window.zeotap.setUserIdentities({
           loginid: 'UserLogin123' // Provide RAW login ID (case doesn't matter for input)
         });
@@ -583,7 +583,7 @@ Before using `setUserIdentities`, you must decide how PII (like email and phone 
 
         The SDK will generate multiple standard hashes (SHA-256, MD5, SHA-1, lower/upper case) and send them nested under the `loginid` key in the payload:
 
-        ```json title="Identities in payload (SDK Hashed - Login ID)" {8-14}
+        ```jsxon title="Identities in payload (SDK Hashed - Login ID)" {8-14}
             "events": [
                 {
                  { /* ... */ },
@@ -655,7 +655,7 @@ cellno_cc is depreacted. It is recommened to use cellno for all cellphone number
 
 You can include any other key-value pairs representing your own first-party identifiers. These are sent as-is and are not affected by the PII hashing configurations.
 
-```javascript
+```jsx
 window.zeotap.setUserIdentities({
   // PII Keys (Raw or Hashed depending on scenario)
   email: 'user@example.com',

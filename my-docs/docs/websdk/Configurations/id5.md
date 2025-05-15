@@ -55,7 +55,7 @@ When `enableID5: true` and a valid `id5PartnerId` are provided:
 
 **Example: Basic ID5 Integration**
 
-```javascript title="SDK Initialization - Basic ID5 Integration"
+```jsx title="SDK Initialization - Basic ID5 Integration"
 window.zeotap.init("YOUR_WRITE_KEY", {
   enableID5: true,         // Enable the integration
   id5PartnerId: 12345,     // Replace 12345 with YOUR actual ID5 Partner ID

@@ -27,7 +27,7 @@ This method is suitable when:
 
 To enable Custom Consent Management, you **must** configure the SDK during initialization as follows:
 
-```javascript title="SDK Initialization for Custom Consent"
+```jsx title="SDK Initialization for Custom Consent"
 window.zeotap.init("YOUR_WRITE_KEY", {
   // --- Configuration for Custom Consent ---
   useConsent: true,           // REQUIRED: Enables consent features.

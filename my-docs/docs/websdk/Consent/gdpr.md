@@ -27,7 +27,7 @@ This method leverages the standardized TCF framework to automatically manage use
 
 To enable TCF v2.x integration, configure the SDK during initialization using the `window.zeotap.init` method:
 
-```javascript title="SDK Initialization for TCF v2.x Integration"
+```jsx title="SDK Initialization for TCF v2.x Integration"
 window.zeotap.init("YOUR_WRITE_KEY", {
   // --- Core TCF Configuration ---
   useConsent: true,           // REQUIRED: Enables consent management features.
@@ -64,7 +64,7 @@ When the SDK is configured to use a TCF CMP (`useConsent: true` and `checkForCMP
 *   However, any **Brand Consents** included in the `setConsent` call (e.g., `{ myBrandConsent: true }`) **will** still be processed, stored, and sent with subsequent events under the `z_p` query parameter of spl requests.
 *   However, any **Brand Consents** (custom key-value pairs other than `track` or `cookieSync`) included in the `setConsent` call **will still be processed**, stored, and sent with subsequent events under the `z_p` query parameter of spl requests. This allows you to manage non-TCF consents alongside TCF integration.
 
-```javascript
+```jsx
 // Example: Even with TCF enabled, this call will still store 'brand1Consent'
 // but the 'track: true' will be ignored in favor of the TCF signal.
 window.zeotap.setConsent({

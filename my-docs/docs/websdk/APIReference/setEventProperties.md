@@ -19,7 +19,7 @@ Use this method to track specific user interactions on your website. These inter
 
 **Usage Example:**
 
-```javascript
+```jsx
 window.zeotap.setEventProperties('AddToCart', {
   productId: 'PQR-222',
   quantity: 1,
@@ -32,7 +32,7 @@ window.zeotap.setEventProperties('AddToCart', {
 
 The page properties will be passed in the payload of the ```https://spl.zeotap.com/fp?``` call:
 
-```json title="Event properties in payload" {5-8}
+```jsxon title="Event properties in payload" {5-8}
             "events": [
                 {
                 "event": {

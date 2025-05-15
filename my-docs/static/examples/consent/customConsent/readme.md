@@ -50,7 +50,7 @@ This scenario is used when you are not integrating with an IAB TCF v2.x complian
 Look for these key sections in the HTML file's `<script>` tags:
 
 1.  **SDK Initialization:**
-    ```javascript
+    ```jsx
     // IMPORTANT: Replace "YOUR_WRITE_KEY" with your actual Zeotap Write Key
     const writeKey = "YOUR_WRITE_KEY";
 
@@ -64,7 +64,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     ```
 
 2.  **`setConsent` Calls (Button Handlers):**
-    ```javascript
+    ```jsx
     document.getElementById('allowButton').addEventListener('click', function() {
         window.zeotap.setConsent({track: true});
         console.log("Called window.zeotap.setConsent (Allowing track)");
@@ -77,7 +77,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     ```
 
 3.  **`setEventProperties` Call (Event Button Handler):**
-    ```javascript
+    ```jsx
     document.getElementById('eventButton').addEventListener('click', function() {
         const eventName = 'Test Event';
         const eventProps = { scenario: 'Manual Set Consent', timestamp: Date.now() };

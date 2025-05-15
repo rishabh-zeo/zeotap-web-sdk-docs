@@ -37,7 +37,7 @@ This HTML file demonstrates the **Default Consent Behavior** of the Zeotap Web S
 Look for these key sections in the HTML file's `<script>` tags:
 
 1.  **SDK Initialization:**
-    ```javascript
+    ```jsx
     // IMPORTANT: Replace "YOUR_WRITE_KEY" with your actual Zeotap Write Key
     const writeKey = "YOUR_WRITE_KEY";
 
@@ -54,7 +54,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     *   `optOut: false` is also the default.
 
 2.  **`setEventProperties` Call:**
-    ```javascript
+    ```jsx
     document.getElementById('eventButton').addEventListener('click', function() {
         const eventName = 'Test Event';
         const eventProps = { scenario: 'No Consent Management', timestamp: Date.now() };

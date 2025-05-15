@@ -34,7 +34,7 @@ When the SDK is operating in this default mode (`useConsent: false`), calls to t
 
 ## Example
 
-```javascript title="SDK Initialization (Default Mode - Tracking Enabled)"
+```jsx title="SDK Initialization (Default Mode - Tracking Enabled)"
 // Initializes the SDK with default settings:
 // useConsent: false (implied)
 // optOut: false (implied)

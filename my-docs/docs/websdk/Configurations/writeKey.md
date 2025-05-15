@@ -25,14 +25,14 @@ You can find your Write Key within the Zeotap Customer Data Platform (CDP) after
     *   Once you've selected or created your Web Javascript Source, go to its "Implementation Details" section.
     *   The **Write Key** will be displayed here. It's a long string of alphanumeric characters.
 
-    ![Example of where to find the Write Key in the Zeotap CDP](../../static/img/writeKey.png)
+    ![Example of where to find the Write Key in the Zeotap CDP](../../../static/img/writeKey.png)
     *(The image above shows an example of the Zeotap CDP interface where the Write Key can be found.)*
 
 ## Using the Write Key in Your SDK Initialization
 
 When you initialize the Zeotap Web SDK in your website's code, the Write Key is the first and most crucial parameter you provide:
 
-```javascript
+```jsx
 window.zeotap.init("YOUR_WRITE_KEY", {
   // ... other configuration options
 });

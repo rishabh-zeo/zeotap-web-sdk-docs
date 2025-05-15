@@ -26,7 +26,7 @@ PIIs (like `cellno`, `email`, `loginid`) sent via `setUserProperties` are always
 
 **Usage Example**
 
-```javascript title="Sending user segment and a custom preference"
+```jsx title="Sending user segment and a custom preference"
 
 window.zeotap.setUserProperties({
   userSegment: 'loyal_customer',
@@ -38,7 +38,7 @@ window.zeotap.setUserProperties({
 
 **Verification**
 
-```json title="Event properties in payload" {5,12-22}
+```jsxon title="Event properties in payload" {5,12-22}
             "events": [
                 {
                 "event": {

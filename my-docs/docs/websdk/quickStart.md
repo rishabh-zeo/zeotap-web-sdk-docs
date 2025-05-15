@@ -13,7 +13,7 @@ Obtain the write key from the created source. [How to obtain a write key?](./Con
 
 To install the Zeotap Web SDK, add the following script to your `<head>` of your file:
 
-```js
+```jsx
     <script type="text/javascript">!function(e,t){var 
     n=t.createElement("script");
     n.type="text/javascript",n.crossorigin="anonymous",n.async= !0,n.src="<SRC>",n.onload=function(){};
@@ -38,7 +38,7 @@ Once the Zeotap SDK is integrated, you can start setting up user identities. Use
 
 The Zeotap SDK provides the `setUserIdentities` function to identify your users in order to manage them.
 
- ```js
+ ```jsx
         window.zeotap.setUserIdentities({
             email: 'user@example.com',
             cellno: '1 5551234567',
@@ -52,7 +52,7 @@ Page properties allow you to send information about the current page to Zeotap. 
 
 To send page properties, use the `setPageProperties` method:
 
- ```js
+ ```jsx
         window.zeotap.setPageProperties({
           pageCategory: 'product',
           pageName: 'product-details',
@@ -67,7 +67,7 @@ setEventProperties allows you to track specific actions that users take on your 
 
 To track user events, you can use the `setEventProperties` method:
 
-```js
+```jsx
         window.zeotap.setEventProperties('Product Added', {
           productId: '12345',
           productName: 'Example Product',

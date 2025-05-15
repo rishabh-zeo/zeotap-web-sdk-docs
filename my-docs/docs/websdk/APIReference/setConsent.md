@@ -12,10 +12,9 @@ For [custom consent](../Consent/customConsent) it is needed to specifiy the cons
 
 It can also be used to specify any brand consents.
 
-```javascript
+```jsx
 window.zeotap.setConsent(consentObject);
 ```
-
 
 ## consentObject Structure
 
@@ -39,7 +38,7 @@ The `consentObject` is a JavaScript object containing key-value pairs. It includ
 - Do **not** directly control SDK tracking or cookie behavior.
 
 :::note
- Brand consents are processed and sent to Zeotap independently of the track and cookieSync settings. Even if primary tracking consent is denied, brand consent information can still be transmitted.
+Brand consents are processed and sent to Zeotap independently of the track and cookieSync settings. Even if primary tracking consent is denied, brand consent information can still be transmitted.
 :::
 
 ---
@@ -47,7 +46,7 @@ The `consentObject` is a JavaScript object containing key-value pairs. It includ
 ## Examples
 
 ### Example 1: Grant full consent
-```javascript
+```jsx
 window.zeotap.setConsent({
   track: true,
   cookieSync: true
@@ -55,7 +54,7 @@ window.zeotap.setConsent({
 ```
 
 ### Example 2: Track but no cookie sync, with brand consent
-```javascript
+```jsx
 window.zeotap.setConsent({
   track: true,
   cookieSync: false,
@@ -64,7 +63,7 @@ window.zeotap.setConsent({
 ```
 
 ### Example 3: Deny all primary consents
-```javascript
+```jsx
 window.zeotap.setConsent({
   track: false,
   cookieSync: false
@@ -72,7 +71,7 @@ window.zeotap.setConsent({
 ```
 
 ### Example 4: Brand consents only
-```javascript
+```jsx
 window.zeotap.setConsent({
   analyticsConsent: true,
   personalizationConsent: false
@@ -80,7 +79,7 @@ window.zeotap.setConsent({
 ```
 
 :::note
-setConsent call triggers a GET call to ```https://spl.zeotap.com/fp?``` with   ```event_eventName: "setConsent"/"updateConsent"```.
+setConsent call triggers a GET call to `https://spl.zeotap.com/fp?` with `event_eventName: "setConsent"/"updateConsent"`.
 :::
 
 ---
@@ -107,7 +106,7 @@ setConsent call triggers a GET call to ```https://spl.zeotap.com/fp?``` with   `
 ## Persistence
 
 - By default, consent is hashed and stored in **Session Storage**.
-- If `persistenceInCookieStorage: true` is set during init, consent is stored in a **first-party cookie** — useful for cross-subdomain persistence. [Learn more about ```persistenceInCookieStorage```](../Configurations/persistenceInCookieStorage)
+- If `persistenceInCookieStorage: true` is set during init, consent is stored in a **first-party cookie** — useful for cross-subdomain persistence. [Learn more about `persistenceInCookieStorage`](../Configurations/persistenceInCookieStorage)
 
 ---
 

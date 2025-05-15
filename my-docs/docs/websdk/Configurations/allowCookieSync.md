@@ -25,7 +25,7 @@ You configure `allowCookieSync` within the options object passed to the `window.
 
 If you want to prevent the SDK from initiating any cookie syncs:
 
-```javascript title="SDK Initialization - Disabling Cookie Sync"
+```jsx title="SDK Initialization - Disabling Cookie Sync"
 window.zeotap.init("YOUR_WRITE_KEY", {
   allowCookieSync: false // Explicitly disable cookie syncing
   // ... other configurations

@@ -25,7 +25,7 @@ This example showcases:
     *   Open the `example.html` file.
     *   Locate the SDK initialization script block (marked with `<!-- 2. Initialize the SDK -->`).
     *   Replace `"YOUR_WRITE_KEY"` with your actual Zeotap Write Key:
-        ```javascript
+        ```jsx
         // IMPORTANT: Replace "YOUR_WRITE_KEY" with your actual Zeotap Write Key
         const writeKey = "YOUR_WRITE_KEY"; // <--- REPLACE THIS
         window.zeotap.init(writeKey);
@@ -62,13 +62,13 @@ This example showcases:
 *   **SDK Integration Snippet (`<!-- 1. ... -->`):**
     This is the standard Zeotap SDK loader script. Note that this example uses a QA version of the SDK (`https://content.zeotap.com/sdk/qa/zeotap.min.js`). For production, use the appropriate production SDK URL.
 *   **SDK Initialization (`<!-- 2. ... -->`):**
-    ```javascript
+    ```jsx
     const writeKey = "YOUR_WRITE_KEY"; // Replace with your actual key
     window.zeotap.init(writeKey);
     ```
     This initializes the SDK with your specific Write Key.
 *   **`addToCart` Function:**
-    ```javascript
+    ```jsx
     function addToCart(productId, productName, price, quantity) {
         const eventName = 'add_to_cart';
         const eventProperties = {

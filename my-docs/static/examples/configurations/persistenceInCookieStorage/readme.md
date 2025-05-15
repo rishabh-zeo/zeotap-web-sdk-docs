@@ -44,7 +44,7 @@ Using cookie storage is particularly useful when you need identity and consent i
 Look for these key sections in the HTML file's `<script>` tags:
 
 1.  **SDK Initialization:**
-    ```javascript
+    ```jsx
     // IMPORTANT: Replace "YOUR_WRITE_KEY" with your actual Zeotap Write Key
     const writeKey = "YOUR_WRITE_KEY";
 
@@ -60,7 +60,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     *   The `domain` option (commented out) would be used if you need cookies to be accessible across subdomains (e.g., set to `.example.com`).
 
 2.  **`setUserIdentities` Call (Button Handler):**
-    ```javascript
+    ```jsx
     document.getElementById('storeIdentityButton').addEventListener('click', function() {
         const userIds = {
           email: 'cookie.test@example.com',

@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Zeotap SDK',
+  title: 'Zeotap Docs',
   tagline: '',
   favicon: 'img/zeotap_favicon.png',
 
@@ -45,25 +45,65 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          path: './blog',
-          routeBasePath: 'release-notes', 
-          blogTitle: 'Release Notes',
-          blogDescription: 'All product updates and changes',
-          blogSidebarTitle: 'All Versions',
-          blogSidebarCount: 'ALL',
-        },
+        docs: false,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'websdk',
+        path: 'docs/websdk',
+        routeBasePath: 'websdk/docs',
+        sidebarPath: './sidebars.js',
+        breadcrumbs: true,
+        showLastUpdateTime: true
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'websdk-releases',
+        path: 'release-notes/websdk',
+        routeBasePath: 'websdk/release-notes',
+        blogTitle: 'WebSDK Release Notes',
+        blogDescription: 'WebSDK product updates and changes',
+        blogSidebarTitle: 'Recent Releases',
+        blogSidebarCount: 'ALL',
+        showReadingTime: false,
+        postsPerPage: 'ALL',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'gtm',
+        path: 'docs/gtm',
+        routeBasePath: 'gtm/docs',
+        sidebarPath: './sidebars.js',
+        breadcrumbs: true,
+        showLastUpdateTime: true
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'gtm-releases',
+        path: 'release-notes/gtm',
+        routeBasePath: 'gtm/release-notes',
+        blogTitle: 'GTM Release Notes',
+        blogDescription: 'GTM product updates and changes',
+        blogSidebarTitle: 'Recent Releases',
+        blogSidebarCount: 'ALL',
+        showReadingTime: false,
+        postsPerPage: 'ALL',
+      },
     ],
   ],
 
@@ -80,15 +120,32 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'DocumentationSidebar',
             position: 'left',
-            label: 'Documentation',
+            label: 'WebSDK',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/websdk/docs/intro',
+              },
+              {
+                label: 'Release Notes',
+                to: '/websdk/release-notes',
+              },
+            ],
           },
           {
-            to: '/release-notes', 
-            label: 'Release Notes', 
-            position: 'left'
+            position: 'left',
+            label: 'GTM',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/gtm/docs/intro',
+              },
+              {
+                label: 'Release Notes',
+                to: '/gtm/release-notes',
+              },
+            ],
           },
           {
             href: 'https://github.com/zeotap',
@@ -101,18 +158,31 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'WebSDK',
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/intro',
+                to: '/websdk/docs/intro',
               },
               {
                 label: 'Release Notes',
-                to: '/releaseNotes',
+                to: '/websdk/release-notes',
               },
             ],
-          }
+          },
+          {
+            title: 'GTM',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/gtm/docs/intro',
+              },
+              {
+                label: 'Release Notes',
+                to: '/gtm/release-notes',
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Zeotap. Built with Docusaurus.`,
       },
