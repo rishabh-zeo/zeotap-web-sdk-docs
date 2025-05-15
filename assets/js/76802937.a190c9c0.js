@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[8269],{7520:e=>{e.exports=JSON.parse('{"blogBasePath":"/zeotap-web-sdk-docs/gtm/release-notes","blogTitle":"GTM Release Notes","authorsListPath":"/zeotap-web-sdk-docs/gtm/release-notes/authors"}')}}]);

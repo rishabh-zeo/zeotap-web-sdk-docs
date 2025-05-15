@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[4855],{7477:e=>{e.exports=JSON.parse('{"title":"Recent Releases","items":[{"title":"Version 0.0.3","permalink":"/zeotap-web-sdk-docs/websdk/release-notes/v0.0.4","unlisted":false,"date":"2025-05-12T00:00:00.000Z"}]}')}}]);
