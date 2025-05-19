@@ -98,7 +98,32 @@ const config = {
         path: 'release-notes/gtm',
         routeBasePath: 'gtm/release-notes',
         blogTitle: 'GTM Release Notes',
-        blogDescription: 'GTM product updates and changes',
+        blogDescription: 'GTM integration updates and changes',
+        blogSidebarTitle: 'Recent Releases',
+        blogSidebarCount: 'ALL',
+        showReadingTime: false,
+        postsPerPage: 'ALL',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'adobe',
+        path: 'docs/adobe',
+        routeBasePath: 'adobeLaunch/docs',
+        sidebarPath: './sidebars.js',
+        breadcrumbs: true,
+        showLastUpdateTime: true
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'adobe-releases',
+        path: 'release-notes/adobe',
+        routeBasePath: 'adobeLaunch/release-notes',
+        blogTitle: 'Adobe Launch Release Notes',
+        blogDescription: 'Adobe Launch integration updates and changes',
         blogSidebarTitle: 'Recent Releases',
         blogSidebarCount: 'ALL',
         showReadingTime: false,
@@ -144,6 +169,20 @@ const config = {
               {
                 label: 'Release Notes',
                 to: '/gtm/release-notes',
+              },
+            ],
+          },
+          {
+            position: 'left',
+            label: 'Adobe',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/adobeLaunch/docs/intro',
+              },
+              {
+                label: 'Release Notes',
+                to: '/adobeLaunch/release-notes',
               },
             ],
           },

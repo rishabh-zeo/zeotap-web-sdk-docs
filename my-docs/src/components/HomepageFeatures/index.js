@@ -24,6 +24,17 @@ const FeatureList = [
     buttonText: "GTM Documentation",
      redirectLink: 'gtm/docs/intro'
     
+  },
+  {
+    title: 'Adobe Launch',
+    description: (
+      <>
+        SDK Integration using Adobe Launch.
+      </>
+    ),
+    buttonText: "Adobe Launch Documentation",
+     redirectLink: 'adobeLaunch/docs/intro'
+    
   }
 ];
 
