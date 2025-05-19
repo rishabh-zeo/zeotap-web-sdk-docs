@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[3254],{7363:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/zeotap-web-sdk-docs/gtm/release-notes","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"GTM integration updates and changes","blogTitle":"GTM Release Notes"}}')}}]);
