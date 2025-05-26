@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[9212],{4717:e=>{e.exports=JSON.parse('{"tags":[{"label":"release","permalink":"/zeotap-web-sdk-docs/gtm/release-notes/tags/release","count":1}]}')}}]);
