@@ -20,7 +20,6 @@ Ready to unlock the full potential of your customer data? Follow these steps to 
 3. **API Reference:** See all the available methods. [API Reference Guide](/docs/category/guides--references)
 4. **Consent Resolution:** Configure consent resolution mechanism. [Consent Resolution Guide](/docs/Consent/consentStrategy)
 5. **Examples:** Guide to different use cases and their implementation. [Examples Guide](/docs/examples)
-6. **Best Practices:** Some best practices to leverage the full potential of Zeotap SDK. [Best Practices Guide](./best-practices.md) 
 
 ## Support
 
