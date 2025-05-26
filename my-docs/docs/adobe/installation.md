@@ -30,7 +30,7 @@ Ensure you have the following before proceeding:
 - Navigate to **Tags** under **Adobe Experience Platform**
 - Choose the appropriate **Property** for your website
 
-> ![Adobe Launch Property Dashboard](../../static/img/zeotap_logo.svg)
+> ![Adobe Launch Property Dashboard](../../static/img/Adobe/Adobe_Property.png)
 
 ---
 
@@ -39,7 +39,7 @@ Ensure you have the following before proceeding:
 - In the left-hand navigation, click **Extensions**
 - Click the **Catalog** tab
 
-> ![Extensions Catalog Tab](../../static/img/zeotap_logo.svg)
+> ![Extensions Catalog Tab](../../static/img/Adobe/Adobe_Catalog.png)
 
 ---
 
@@ -48,7 +48,7 @@ Ensure you have the following before proceeding:
 - Use the search bar to find `Zeotap Collect`
 - Click the **Install** button next to the extension
 
-> ![Zeotap Extension in Catalog](../../static/img/zeotap_logo.svg)
+> ![Zeotap Extension in Catalog](../../static/img/Adobe//Adobe_ZeotapExtension.png)
 
 ---
 
@@ -60,7 +60,7 @@ Once installed:
 - Click on **Zeotap Collect**
 - Proceed to configure the extension [here](./configure)
 
-> ![Installed Zeotap Extension](../../static/img/zeotap_logo.svg)
+> ![Installed Zeotap Extension](../../static/img/Adobe/Adobe_Configure.png)
 
 ---
 
@@ -71,5 +71,5 @@ Once installed:
 - Build a new library and assign it to the relevant environment (e.g., Development, Staging, Production)
 - Click **Submit**, **Approve**, and **Publish** (if ready)
 
-> ![Publishing Flow](../../static/img/zeotap_logo.svg)
+> ![Publishing Flow](../../static/img/Adobe/Adobe_Save.png)
 

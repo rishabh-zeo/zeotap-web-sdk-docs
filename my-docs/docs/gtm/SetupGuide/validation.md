@@ -30,9 +30,9 @@ Follow the steps below to validate the tag setup.
 - In the **Tag Assistant** interface, enter the URL of the website where GTM is installed.
 - Click **Start** to begin the preview session.
 
-### Example Screenshot Placeholder
+### Example
 
-![Tag Assistant Launch](../../../static/img/zeotap_logo.svg)
+![Tag Assistant Launch](../../../static/img/GTM/GTM_Preview.png)
 
 
 ### 4. Interact With Your Website
@@ -52,9 +52,8 @@ Follow the steps below to validate the tag setup.
 - Click **Continue** to proceed to the next event.
 - Under the **Tags Fired** section, verify that the **Zeotap Collect Tag** appears as fired.
 
-### Screenshot Placeholder
 
-![Tags Fired Example](../../../static/img/zeotap_logo.svg)
+![Tags Fired Example](../../../static/img/GTM/GTM_Tagfired.png)
 
 
 ---

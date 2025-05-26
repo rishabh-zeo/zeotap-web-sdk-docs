@@ -33,7 +33,7 @@ Adobe Launch is a tag management system that helps manage and deploy marketing a
 |----------------------------|-------------|
 | **Event Tracking**         | Capture user interactions like page views, product clicks, form submissions, etc. |
 | **User Identity Capture**  | Collect raw or hashed PII and custom IDs like ECID, CRM ID. |
-| **Consent Management**     | Supports GDPR/TCF, default opt-in, and custom flows via `setConsent`. |
+| **Consent Management**     | Supports GDPR/TCF, default opt-in, and custom flows via `Set Custom Consent`. |
 | **Cookie Syncing**         | Enabled by default for Zeotap and partner platforms. |
 | **ID5 Integration**        | Capture ID5 identifiers for identity enrichment. |
 
@@ -45,13 +45,25 @@ This guide walks you through:
 
 1. Installing the Zeotap Collect Extension in Adobe Launch
 2. Configuring core settings like consent method, write key, and identity handling
-3. Creating Rules to:
-   - Load the SDK
-   - Track Events
-   - Sync User Identities
-4. Optional: ID5 Integration
-5. Debugging and validation
+3. Creating Rules to use Zeotap Extensions [Actions](./Actions) to:
+   - [Track Events](./Actions/trackEvents)
+   - [Sync User Identities](./Actions/syncUserIdentity)
+   - [Track Consent](./Actions/setCustomConsent) (Custom Consent)
 
-Each step includes relevant Adobe Launch UI references, screenshots (as placeholders), and real implementation examples.
+Each step includes relevant Adobe Launch UI references, screenshots, and real implementation examples.
+
+---
+
+## Understanding Adobe Launch Terminology
+
+Before diving into the Zeotap integration, it's helpful to understand some core Adobe Launch concepts:
+
+*   **Tags:** "Tags" in Adobe Launch is the overall system that allows you to build and maintain your own integrations through components called extensions. These extensions are available to Adobe Experience Cloud customers in an app-store-like experience, enabling them to quickly install, configure, and deploy various tracking and marketing technologies. [Learn more about Tags](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
+
+*   **Extensions:** An extension is a package of code (JavaScript, HTML, and CSS) that extends the functionality of Adobe Launch. Think of extensions as apps or plugins that you install into your Launch property to add specific capabilities, like the Zeotap Collect Extension. [Learn more about Extensions.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/extensions/overview)
+
+*   **Rules:** Rules are the heart of Adobe Launch, defining the logic for when and how your tags and extensions should behave. They follow an ‘if/then’ structure, combining Events (triggers), Conditions (optional criteria), and Actions (what to do, e.g., fire the Zeotap tag). [Learn more about Rules](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)
+
+*   **Data Elements:** Data Elements are variables you create in Launch to point to specific pieces of information on your website (e.g., from cookies, JavaScript variables, DOM elements, or query parameters). They act as a data dictionary for your site and can be used to dynamically populate fields when configuring Rules and Actions, ensuring your tags send the correct, context-specific data. [Learn more about Data Elements](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/data-elements).
 
 ---

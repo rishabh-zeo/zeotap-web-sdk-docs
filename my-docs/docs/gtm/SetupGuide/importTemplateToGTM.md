@@ -16,7 +16,7 @@ Follow these steps:
 2.  **Navigate to Templates**:
     In the left-hand navigation menu of your GTM workspace, click on **Templates**.
 
-    ![GTM Templates Menu](../../../static/img/GTM_template_screen.png)
+    ![GTM Templates Menu](../../../static/img/GTM/GTM_template_screen.png)
 
 3.  **Access the Template Gallery**:
     Within the "Tag Templates" section, click on the **Search Gallery** button located on the top-right corner.
@@ -24,7 +24,7 @@ Follow these steps:
 4.  **Search for Zeotap Collect Tag**:
     In the search bar that appears, type "Zeotap Collect Tag" and press Enter, or browse the list to find the **Zeotap Collect Tag Template**.
 
-     ![GTM Search Gallery Button](../../../static/img/GTM_Gallery.png)
+     ![GTM Search Gallery Button](../../../static/img/GTM/GTM_Gallery.png)
 
 5.  **Select the Template**:
     Once you find the "Zeotap Collect Tag Template" in the search results, click on it to open the template details.

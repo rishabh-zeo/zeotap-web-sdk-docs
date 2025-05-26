@@ -12,6 +12,8 @@ Carefully configure the following fields:
 
 ## Basic Configuration
 
+![Basic Configurations](../../../../static/img/GTM/GTM_BasicConfig.png)
+
 ### Write Key
 
 *   **Purpose**: Uniquely identifies your GTM-based source in your Zeotap CDP account.
@@ -46,11 +48,15 @@ Choose one of the following options:
 
 ### a) Default Opt-in
 
+![Default Consent](../../../../static/img/GTM/GTM_DefaultConsent.png)
+
 *   **Behavior**: Sets the `optOut` flag in the SDK to `false` by default, meaning events are recorded unless an explicit opt-out is signaled.
 *   **Use Case**: Select this if you manage consent through other mechanisms (e.g., server-side, API integration, file upload) and only want the GTM tag to fire for users who have already consented. The communication of consent status happens outside this GTM tag's direct logic.
 *   **Configuration**: You can use "Additional Consent Settings" to pass TC String and custom brand consent details if needed.
 
 ### b) Check TCF CMP (IAB Transparency and Consent Framework)
+
+![TCF Consent](../../../../static/img/GTM/GTM_GDPRConsent.png)
 
 *   **Behavior**: Sets `useConsent` and `checkForCMP` options in the SDK to `true`. The SDK will automatically look for a TCF-compliant Consent Management Platform (CMP) on your website. It does this by checking for the `cmp.js` script and the `__cmp` variable in the global scope. It then queries the TCF API to fetch the latest publisher consent status before recording any events on each SDK load.
 *   **Use Case**: Select this if you use an IAB TCF v2.0 or v2.2 compliant CMP on your website.
@@ -60,6 +66,8 @@ Choose one of the following options:
 
 ### c) Custom Consent
 
+![Custom Consent](../../../../static/img/GTM/GTM_CustomConsent.png)
+
 *   **Behavior**: Allows you to define a custom consent management logic based on signals from your `dataLayer`.
 *   **Use Case**: Select this if you have a non-TCF CMP or a custom consent setup and want to control SDK behavior (tracking, cookie syncing) based on specific dataLayer events and variables.
 *   **Configuration**: When you select "Custom Consent," you need to specify the following in the "SDK Consent Signals" section:
@@ -67,11 +75,14 @@ Choose one of the following options:
     *   **Other Variables**: Map dataLayer variables to control the SDK's consent-related functionalities:
         *   `Track` signal: A dataLayer variable whose value (e.g., `true`/`false`) determines if event tracking is allowed.
         *   `Cookie Sync` signal: A dataLayer variable for managing cookie synchronization.
+        *   `Identify` signal: Deprecated not required.
 *   **Note**: As with other methods, "Additional Consent Settings" can be used to send TC string and custom brand consent if needed.
 
 ### Additional Consent Options
 
 These settings provide supplementary ways to send consent information to Zeotap, often used in conjunction with or as an enhancement to the primary "Consent Method" selected above.
+
+![Additional Consent](../../../../static/img/GTM/GTM_AdditionalConsent.png)
 
 #### 1. Include TC String in the requests
 

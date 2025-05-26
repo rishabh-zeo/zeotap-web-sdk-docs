@@ -12,7 +12,11 @@ This section of the Zeotap Collect Tag setup guides you through configuring how 
 
 ## Login Event
 
-**Purpose**: Specifies the `dataLayer` event name that is fired when a user logs in.
+**Purpose**: Specifies the `dataLayer` event name that is fired when a user logs in or when an user identity is to stored. 
+
+:::note 
+  These Identities will be stored and persisted across all the subsequent calls to zeotap. 
+:::
 
 **Example:**
 
@@ -27,9 +31,8 @@ dataLayer.push({
 
 **Action**:  
 In the tag configuration, set the Login Event field to match your event name (e.g., `user_logged_in`).
-
->  _Placeholder for Screenshot_:  
-> ![Login Event Trigger in GTM](../../../../static/img/zeotap_logo.svg)
+ 
+![Login Event Trigger in GTM](../../../../static/img/GTM/GTM_userIdentities.png)
 
 ---
 
@@ -60,8 +63,7 @@ Check this option **only** if your identity values (email, phone, login ID) are 
   - Select **Hash Algorithm** (e.g., SHA-256)
   - Choose your GTM Variable (e.g., `{{Hashed Login ID}}`)
 
->  _Placeholder for Screenshot_:  
-> ![Hashed Identities Settings](../../../../static/img/zeotap_logo.svg)
+ ![Hashed Identities Settings](../../../../static/img/GTM/GTM_Hashed.png)
 
 ---
 
@@ -86,11 +88,16 @@ Enable this **only** if your identity values are in raw format (e.g., plain emai
 - Enable: **"Capture Loginid"**
 - Select Variable (e.g., `{{Login ID}}`)
 
->  To learn more about supported hashing algorithms and formatting guidelines, [refer to our hashing guidelines](#).  
->  _Placeholder for Screenshot_:  
-> ![Raw Identity Hashing Settings](../../../../static/img/zeotap_logo.svg)
+To learn more about supported hashing algorithms and formatting guidelines, [refer to our hashing guidelines](#).  //TODO
+![Raw Identity Hashing Settings](../../../../static/img/GTM/GTM_NeedsHashing.png)
 
 ---
+
+//TODO
+
+:::warning Deprecated
+ID+ usage is deprecated.
+:::
 
 ##  Create First Party ID+ Cookie on Login
 
@@ -98,7 +105,6 @@ If you are a **Publisher using Zeotap’s ID+ services**, enable this checkbox t
 
 >  This requires that you have enabled ID+ for your organization.
 
----
 
 ##  Organisation Partner ID
 
@@ -106,6 +112,8 @@ Enter the **Partner ID** provided by Zeotap.
 This field is required for using ID+ services.
 
 > Example: `zeotap-partner-12345`
+
+
 
 ---
 
@@ -124,8 +132,7 @@ dataLayer.push({
 **Action**:  
 Set this to the event name (e.g., `user_logged_out`) in your tag configuration.
 
->  _Placeholder for Screenshot_:  
-> ![Logout Event Settings](../../../../static/img/zeotap_logo.svg)
+![Logout Event Settings](../../../../static/img/GTM/GTM_UserAttributes.png)
 
 ---
 
@@ -144,8 +151,13 @@ Use this section to provide **additional user information** to be sent to Zeotap
 **Action**:  
 Map each GTM variable to the corresponding attribute key. These will be included in `setUserProperties`.
 
->  _Placeholder for Screenshot_:  
-> ![User Attributes Mapping](../../../../static/img/zeotap_logo.svg)
+A call to zeotap will be made with `eventName: 'set_user_properties'` with the set user properties in the user node of the paylod.
+
+:::note
+These properties are not persisted across subsequent calls to zeotap.
+:::
+
+![User Attributes Mapping](../../../../static/img/GTM/GTM_UserAttributes.png)
 
 ---
 

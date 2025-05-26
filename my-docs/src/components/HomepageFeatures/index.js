@@ -15,10 +15,10 @@ const FeatureList = [
     redirectLink: 'websdk/docs/intro'
   },
   {
-    title: 'GTM',
+    title: 'Google Tag Manager (GTM)',
     description: (
       <>
-        SDK Integration using GTM.
+        SDK Integration using Google Tag Manager (GTM).
       </>
     ),
     buttonText: "GTM Documentation",

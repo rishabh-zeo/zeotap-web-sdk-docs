@@ -45,11 +45,5 @@ GA Client ID Cookie Prefix: example
 
 ---
 
-### Example Configuration UI
-
-![GA Configuration Example Screenshot](../../../../static/img/zeotap_logo.svg)
-
----
-
 If you're unsure about how your GA cookie is configured or whether to include the Client ID on all events or just login, consult your analytics team or review your GA settings.
 

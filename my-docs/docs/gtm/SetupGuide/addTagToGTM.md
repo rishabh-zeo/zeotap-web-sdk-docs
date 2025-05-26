@@ -23,13 +23,13 @@ Follow these steps to add the Zeotap Collect Tag:
     -   A panel will slide out from the right. In the "Choose tag type" search bar, or by scrolling, find the **Zeotap Collect Tag Template** that you added previously.
         -   **Important**: The Zeotap Collect Tag Template will be listed under the **Custom** section.
 
-         ![GTM Add Menu](../../../static/img/GTM_AddTag.png)
+         ![GTM Add Menu](../../../static/img/GTM/GTM_AddTag.png)
 
 4.  **Select the Zeotap Collect Tag Template**:
     -   Click on the **Zeotap Collect Tag Template** from the list.
     -   This will open the configuration interface for the tag, based on the template's defined fields.
 
-     ![GTM Configuration menu](../../../static/img/GTM_Configuration.png)
+     ![GTM Configuration menu](../../../static/img/GTM/GTM_Configuration.png)
 
 ## Next Steps
 

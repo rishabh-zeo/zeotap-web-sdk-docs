@@ -90,9 +90,7 @@ You can also configure the trigger directly while creating or editing the tag.
 
 ---
 
-## Example Trigger Configuration Screenshot
-
-![Example Custom Event Trigger](../../../static/img/zeotap_logo.svg)
+## Example Trigger Configuration
 
 ```text
 Event Name: Login event
@@ -103,5 +101,5 @@ Trigger Type: Custom Event
 
 Once your trigger is created and linked to the Zeotap Collect Tag, the tag will begin to send event data as configured.
 
-You can refer the [offical GTM documentation](https://support.google.com/tagmanager/answer/7679316?hl=en) to learn more about triggers.
+You can refer the [offical GTM documentation](https://support.google.com/tagmanager/answer/7679316?hl=en) //todo update the link to learn more about triggers.
 

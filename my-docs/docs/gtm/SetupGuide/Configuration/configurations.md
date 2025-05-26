@@ -11,7 +11,7 @@ The configuration process is broken down into the following key sections:
 
 Below is a visual overview of where these configuration options are typically found within the GTM interface for the Zeotap Collect Tag:
 
-![Overview of Zeotap Collect Tag configuration options in GTM](../../../../static/img/GTM_ConfigurationOptions.png)
+![Overview of Zeotap Collect Tag configuration options in GTM](../../../../static/img/GTM/GTM_ConfigurationOptions.png)
 
 ### 1. Initialization Options
 This section covers the fundamental settings for the tag, including your Zeotap Write Key, user country for data storage, and consent management preferences. These are critical for the tag to start collecting data correctly.
