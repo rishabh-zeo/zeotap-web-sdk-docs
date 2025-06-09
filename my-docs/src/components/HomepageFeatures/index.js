@@ -35,6 +35,17 @@ const FeatureList = [
     buttonText: "Adobe Launch Documentation",
      redirectLink: 'adobeLaunch/docs/intro'
     
+  },
+  {
+    title: 'Android SDK',
+    description: (
+      <>
+        SDK Integration for Android.
+      </>
+    ),
+    buttonText: "Android SDK Documentation",
+    redirectLink: 'androidsdk/docs/intro'
+    
   }
 ];
 
