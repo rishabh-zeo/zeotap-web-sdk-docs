@@ -30,7 +30,7 @@ This HTML file demonstrates **Scenario 3: SDK Performs Hashing** using the Zeota
     *   Inspect the **Payload** (or Request Body) of this request.
     *   Within the JSON payload, find the `user` object.
     *   You should see the PII keys (e.g., `email`, `cellno`) with nested objects containing various hash types (e.g., `sha256_lowercase`, `md5_lowercase`) and their corresponding **SDK-generated hashed values**. The original raw PII should **not** be present in the network payload. For example:
-        ```json
+        ```jsxon
         "user": {
             // ... other IDs like zs, zi ...
             "email": {
@@ -55,7 +55,7 @@ This HTML file demonstrates **Scenario 3: SDK Performs Hashing** using the Zeota
 Look for these key sections in the HTML file's `<script>` tags:
 
 1.  **SDK Initialization:**
-    ```javascript
+    ```jsx
     window.zeotap.init("YOUR_WRITE_KEY", { // Replace with your actual Write Key
       hashIdentities: true,       // Crucial: Tells the SDK TO HASH the input.
       areIdentitiesHashed: false, // Crucial: Confirms the input IS RAW.
@@ -63,7 +63,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     });
     ```
 2.  **`setUserIdentities` Call:**
-    ```javascript
+    ```jsx
     function setRawIdentitiesForSDKHashing() {
       const rawEmail = 'test.user.sdk.hash@example.com';
       const rawPhoneNumber = '15557890123'; // Example with country code

@@ -29,7 +29,7 @@ This HTML file demonstrates **Scenario 1: Sending Raw Identifiers** using the Ze
     *   Inspect the **Payload** (or Request Body) of this request.
     *   Within the JSON payload, find the `user` object.
     *   You should see the **raw keys and raw values** you provided, for example:
-        ```json
+        ```jsxon
         "user": {
             // ... other IDs like zs, zi ...
             "email": "test.user@example.com",
@@ -49,7 +49,7 @@ This HTML file demonstrates **Scenario 1: Sending Raw Identifiers** using the Ze
 Look for these key sections in the HTML file's `<script>` tags:
 
 1.  **SDK Initialization:**
-    ```javascript
+    ```jsx
     window.zeotap.init("YOUR_WRITE_KEY", { // Replace with your actual Write Key
       hashIdentities: false,      // Explicitly disable SDK hashing
       areIdentitiesHashed: false, // Confirm input is raw
@@ -57,7 +57,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     });
     ```
 2.  **`setUserIdentities` Call:**
-    ```javascript
+    ```jsx
     function setRawIdentities() {
       const identities = {
         email: 'test.user@example.com',

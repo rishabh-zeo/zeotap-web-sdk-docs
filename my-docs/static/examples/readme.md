@@ -24,7 +24,7 @@ This example is designed to get you up and running quickly with the core feature
     *   Locate the `window.zeotap.init()` function call.
     *   Replace `"YOUR_WRITE_KEY"` with your actual Write Key.
 
-    ```javascript
+    ```jsx
     // Example snippet from quickStart.html or quickStart.js
     window.zeotap.init("YOUR_WRITE_KEY", {
         // Optional configuration
@@ -56,7 +56,7 @@ This example is designed to get you up and running quickly with the core feature
 
 *   **`window.zeotap.setUserIdentities(identifiersObject)`:**
     Used to send user identifiers (like email, phone number, custom IDs) to Zeotap. This helps in building user profiles and enabling cross-device identity resolution.
-    ```javascript
+    ```jsx
     window.zeotap.setUserIdentities({
         emailSha256: "hashed_email_example", // Example: if sending pre-hashed
         // OR
@@ -66,7 +66,7 @@ This example is designed to get you up and running quickly with the core feature
 
 *   **`window.zeotap.setEventProperties(eventName, eventPropertiesObject)`:**
     Tracks custom events and their associated properties. This is crucial for understanding user behavior and interactions on your site.
-    ```javascript
+    ```jsx
     window.zeotap.setEventProperties("product_viewed", {
         productId: "12345",
         category: "electronics"
@@ -75,7 +75,7 @@ This example is designed to get you up and running quickly with the core feature
 
 *   **`window.zeotap.setPageProperties(pagePropertiesObject)`:** (Implicit or Explicit)
     Sends information about the current page being viewed. If `autoTrack.pageView` is true in the SDK configuration, a basic page view event is sent automatically. You can also use `setPageProperties` to send more detailed page context.
-    ```javascript
+    ```jsx
     window.zeotap.setPageProperties({
         pageName: "Homepage",
         pageCategory: "Landing"

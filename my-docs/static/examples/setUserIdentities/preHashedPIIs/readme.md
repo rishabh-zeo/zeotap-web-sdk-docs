@@ -29,7 +29,7 @@ This HTML file demonstrates **Scenario 2: Sending Pre-Hashed Identifiers** using
     *   Inspect the **Payload** (or Request Body) of this request.
     *   Within the JSON payload, find the `user` object.
     *   You should see the PII keys (e.g., `email`, `cellno`) with nested objects containing the specific hash type and the corresponding hashed value you provided. For example:
-        ```json
+        ```jsxon
         "user": {
             // ... other IDs like zs, zi ...
             "email": {
@@ -51,7 +51,7 @@ This HTML file demonstrates **Scenario 2: Sending Pre-Hashed Identifiers** using
 Look for these key sections in the HTML file's `<script>` tags:
 
 1.  **SDK Initialization:**
-    ```javascript
+    ```jsx
     window.zeotap.init("YOUR_WRITE_KEY", { // Replace with your actual Write Key
       areIdentitiesHashed: true, // Crucial: Tells the SDK the values ARE pre-hashed.
       hashIdentities: false,     // Recommended: Tells the SDK NOT to hash again.
@@ -59,7 +59,7 @@ Look for these key sections in the HTML file's `<script>` tags:
     });
     ```
 2.  **`setUserIdentities` Call:**
-    ```javascript
+    ```jsx
     function setPreHashedIdentities() {
       // These values would typically be generated server-side or through a secure hashing process.
       const hashedEmail = 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2'; // Example SHA-256 lowercase hash

@@ -25,7 +25,7 @@ This example showcases:
     *   Open the `example.html` file.
     *   Locate the SDK initialization script block (marked with `<!-- 2. Initialize the SDK -->`).
     *   Replace `"YOUR_WRITE_KEY"` with your actual Zeotap Write Key:
-        ```javascript
+        ```jsx
         // IMPORTANT: Replace "YOUR_WRITE_KEY" with your actual Zeotap Write Key
         const writeKey = "YOUR_WRITE_KEY"; // <--- REPLACE THIS
         window.zeotap.init(writeKey);
@@ -63,13 +63,13 @@ This example showcases:
 *   **SDK Integration Snippet (`<!-- 1. ... -->`):**
     This is the Zeotap SDK loader script. It creates a `window.zeotap` object with a command queue (`_q`), allowing you to call SDK functions like `init` and `setPageProperties` immediately. These calls are queued and executed once the full SDK script (`zeotap.min.js`) is loaded.
 *   **SDK Initialization (`<!-- 2. ... -->`):**
-    ```javascript
+    ```jsx
     const writeKey = "YOUR_WRITE_KEY"; // Replace with your actual key
     window.zeotap.init(writeKey);
     ```
     This initializes the SDK with your specific Write Key.
 *   **`setPageProperties` Call (`<!-- 3. ... -->`):**
-    ```javascript
+    ```jsx
     const pageProps = {
             pageName: "Product Listing",
             pageCategory: "E-commerce",
@@ -83,7 +83,7 @@ This example showcases:
     ```
     This is called directly on page load to set the context for the current page.
 *   **`addToCart` Function:**
-    ```javascript
+    ```jsx
     function addToCart(productId, productName, price, quantity) {
         // ... prepares eventName and eventProperties ...
         window.zeotap.setEventProperties(eventName, eventProperties);
