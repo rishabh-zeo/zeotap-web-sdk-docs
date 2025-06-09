@@ -106,11 +106,11 @@ const config = {
       },
     ],
     [
-      '@docusaurus/plugin-content-docs',
+    '@docusaurus/plugin-content-docs',
       {
-        id: 'adobe',
-        path: 'docs/adobe',
-        routeBasePath: 'adobeLaunch/docs',
+        id: 'androidsdk',
+        path: 'docs/androidsdk',
+        routeBasePath: 'androidsdk/docs',
         sidebarPath: './sidebars.js',
         breadcrumbs: true,
         showLastUpdateTime: true
@@ -119,17 +119,17 @@ const config = {
     [
       '@docusaurus/plugin-content-blog',
       {
-        id: 'adobe-releases',
-        path: 'release-notes/adobe',
-        routeBasePath: 'adobeLaunch/release-notes',
-        blogTitle: 'Adobe Launch Release Notes',
-        blogDescription: 'Adobe Launch integration updates and changes',
+        id: 'androidsdk-releases',
+        path: 'release-notes/androidsdk',
+        routeBasePath: 'androidsdk/release-notes',
+        blogTitle: 'Android SDK Release Notes',
+        blogDescription: 'Android SDK product updates and changes',
         blogSidebarTitle: 'Recent Releases',
         blogSidebarCount: 'ALL',
         showReadingTime: false,
         postsPerPage: 'ALL',
       },
-    ],
+    ]
   ],
 
   themeConfig:
@@ -183,6 +183,20 @@ const config = {
               {
                 label: 'Release Notes',
                 to: '/adobeLaunch/release-notes',
+              },
+            ],
+          },
+          {
+            position: 'left',
+            label: 'Android SDK',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/androidsdk/docs/intro',
+              },
+              {
+                label: 'Release Notes',
+                to: '/androidsdk/release-notes',
               },
             ],
           },
