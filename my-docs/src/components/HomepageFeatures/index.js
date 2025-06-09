@@ -55,6 +55,17 @@ const FeatureList = [
     ),
     buttonText: "React Native Documentation",
     redirectLink: 'reactnativesdk/docs/intro'
+  },
+  {
+    title: 'Android SDK',
+    description: (
+      <>
+        SDK Integration for Android.
+      </>
+    ),
+    buttonText: "Android SDK Documentation",
+    redirectLink: 'androidsdk/docs/intro'
+    
   }
 ];
 
