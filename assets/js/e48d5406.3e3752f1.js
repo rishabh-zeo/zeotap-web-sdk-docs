@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[5237],{8488:e=>{e.exports=JSON.parse('{"blogBasePath":"/zeotap-web-sdk-docs/reactnativesdk/release-notes","blogTitle":"React Native SDK Release Notes","authorsListPath":"/zeotap-web-sdk-docs/reactnativesdk/release-notes/authors"}')}}]);

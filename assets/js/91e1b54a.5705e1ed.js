@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[6429],{4149:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/zeotap-web-sdk-docs/iossdk/release-notes","page":1,"postsPerPage":10,"totalPages":1,"totalCount":10,"blogDescription":"iOS SDK product updates and changes","blogTitle":"iOS SDK Release Notes"}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[5523],{6951:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/zeotap-web-sdk-docs/reactnativesdk/release-notes","page":1,"postsPerPage":16,"totalPages":1,"totalCount":16,"blogDescription":"React Native SDK product updates and changes","blogTitle":"React Native SDK Release Notes"}}')}}]);
