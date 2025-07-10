@@ -35,6 +35,26 @@ const FeatureList = [
     buttonText: "Adobe Launch Documentation",
      redirectLink: 'adobeLaunch/docs/intro'
     
+  },
+  {
+    title: 'iOS SDK',
+    description: (
+      <>
+        iOS SDK integration.
+      </>
+    ),
+    buttonText: "iOS Documentation",
+    redirectLink: 'iossdk/docs/intro'
+  },
+  {
+    title: 'React Native SDK',
+    description: (
+      <>
+        React Native SDK integration.
+      </>
+    ),
+    buttonText: "React Native Documentation",
+    redirectLink: 'reactnativesdk/docs/intro'
   }
 ];
 
